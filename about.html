@@ -76,29 +76,27 @@ body, html {
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">ABOUT THE COMPANY</h3>
+  <h3 class="w3-center">ABOUT</h3>
   <p class="w3-center w3-large">Key features of our company</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Responsive</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
+    <div class="content clear-block">
+    <p><strong><a href="./">WINGS</a> is a semantic workflow system</strong> that assists scientists with the design of computational experiments.  A computational experiment specifies how selected datasets are to be processed by a series of software components in a particular configuration. Earth scientists use computational experiments to estimate seismic hazard through simulations of earthquake forecasts. Biologists use computational experiments for analysis of gene expression microarray data or molecular interaction networks and pathways. Social scientists analyze large social networks to discover structural regularities based on mining relations among individuals. </p>
+<p><strong>A unique feature of <a href="./">WINGS</a> is that its workflow representations incorporate semantic constraints</strong> about datasets and workflow components.  <a href="./">WINGS</a> reasons about dataset properties and component constraints to create and validate workflows and to generate metadata for new data products. <a href="./">WINGS</a> uses <a href="http://pegasus.isi.edu">Pegasus</a> or <a href="http://oodt.apache.org">OODT</a> as the execution engine for large-scale distributed workflow execution.  A high-level diagram of architecture of <a href="./">WINGS</a> is shown here: </p>
+<p><img src="./sites/default/files/Architecture-Color.jpg" /> </p>
+<p><strong><a href="./">WINGS</a> allows users to express high-level descriptions of their analysis goals,</strong> and assists them by automatically and systematically generating possible workflows that are consistent with that request.  A high-level user request is one that only partially specifies what datasets, parameters, or software components are to be used.  Users can be assisted in an interactive mode, where <a href="./">WINGS</a> generates suggestions and validates their inputs, or in an automatic mode, where <a href="./">WINGS</a> can elaborate their initial request and present the user with execution-ready workflows as options.  <a href="./">WINGS</a> generates workflows in three-stages search process. First it selects components for each step in the workflow. Then it selects datasets from the catalogs to elaborate the initial workflow request and its template. Finally it configures the parameters for each component in the workflow.  During the search process, <a href="./">WINGS</a> eliminates workflow candidates that are not viable because they contain invalid combinations of choices.  Once a workflow candidate is fully elaborated, <a href="./">WINGS</a> expands the workflow to specify any parallel computations over dataset collections. For all the new data products, it generates metadata attributes by propagating metadata from the input data through the descriptions and constraints specified for each of the components. The entire workflow creation and generation process is annotated in detail in a provenance catalog for later inspection.</p>
+<p><strong><a href="./">WINGS</a> is built on open web standards</strong> from the World Wide Web Consortium (W3C) such as the Web Ontology Language (OWL), the Resource Description Framework (RDF), and the SPARQL query language for RDF.  The core ontologies are defined in OWL, while workflow templates, requests, and candidates are expressed in RDF. Many constraints are represented as RDF triples, others that are more complex are represented via Jena Rules.</p>
+<p><strong>The <a href="./">WINGS</a> workflow system has an open modular design</strong> and can be easily integrated with other existing workflow systems and execution frameworks to extend them with semantic reasoning capabilities. We have integrated the Wings semantic workflow system with a variety of user interfaces, and submitted workflows with a variety of execution engines.  <a href="./">WINGS</a> assumes external catalogs of software components and datasets that can be accessed through services. This is an important feature, since scientific environments consist of distributed services to access the data and algorithms necessary for data analysis. Many collaborations are set up where each institution may contribute resources (data, instruments, computers, software) by making them available to others while being maintained by the institution. Data providers may provide services to access data sources. There can be many organizations playing the role of data providers, and as a result data may be accessible in various catalogs that are in distributed remote locations. Other organizations may provide algorithms, services, models, or implemented codes that can process data and can be used as components of workflows. Each provider maintains the resources they contribute. Therefore, the <a href="./">WINGS</a> architecture is designed to interface with external data and component catalogs.</p>
+<p><strong><a href="./">WINGS</a> provides a range of workflow execution alternatives.</strong>  In cases where privacy or off-line use are important, <a href="./">WINGS</a> can submit workflows in a scripted format for execution in the local host.  In cases where scale is important, <a href="./">WINGS</a> can submit workflows to Pegasus or OODT which will manage their execution in shared distributed resources in an efficient and scalable manner. Pegasus selects computational resources, optimizes the workflow structure, submits the workflow for execution, monitors its progress, and resolves possible failures. <a href="./">WINGS</a> has also been integrated with a variety of alternative execution engines, such as the System S engine for data stream processing and BPEL4WS engines.</p>
+<p><strong><a href="./">WINGS</a> can be used as a web application without requiring users to install any software.</strong>  We offer a <a href="/sandbox">WINGS sandbox</a> where anyone can use <a href="./">WINGS</a> with a simple set of workflows that we have developed for tutorial purposes. The Wings Semantic Workflow Reasoner runs in the background, the user interface is the Wings Web Portal, and the execution is done by <a href="http://pegasus.isi.edu">Pegasus</a> or <a href="http://oodt.apache.org">OODT</a>.</p>
+<p>There are several Wings installations (ranging from older versions to newer versions) that contain workflows in diverse application areas, all of them require setting up an account to access:</p>
+<ul>
+<li><a href="http://seagull.isi.edu/marbles">Marbles</a> contains Data Mining Workflows based on the popular Weka data mining software</li>
+<li>Center for Genomic Analysis of Mental Disorders (CGSMD) contains workflows for population genomics</li>
+<li><a href="http://www.pagestudy.org">Population Architecture using Genomics and Epidemiology (PAGE)</a> contains workflows to relate genetic variants to phenotypic data</li>
+<li><a href="http://pedwork.isi.edu/portal/">PedWorkflows</a> includes workflows for student assessment</li>
+</ul>
+<p>To download and install the <a href="./">WINGS</a> software, <a href="./download">visit our release pages</a></p>
+  </div>
   </div>
 </div>
 
