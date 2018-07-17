@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/defaults.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/biblio.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/forum.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/mystyle.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/node.css" />	
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/print.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/project.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/project_release.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/style.css" />	
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/system-menus.css" />	
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/system.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/user.css" />	
+<link type="text/css" rel="stylesheet" media="all" href="/home_css/views.css" />	
 <!-----><link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -52,15 +65,17 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#home" class="w3-bar-item w3-button">Home</a>
+  <a href="#about" class="w3-bar-item w3-button"> About</a>
+  <a href="#research" class="w3-bar-item w3-button"> Research</a>
+  <a href="#publications" class="w3-bar-item w3-button"> Publications</a>
+  <a href="#download" class="w3-bar-item w3-button"> Download</a>
+  <a href="#tutorial" class="w3-bar-item w3-button"> Tutorial</a>
+  <a href="#cite" class="w3-bar-item w3-button"> Cite</a>
 </nav>
-
+	
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+<!--<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
@@ -75,11 +90,23 @@ body, html {
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-</header>
+</header>-->
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">ABOUT THE COMPANY</h3>
+	<div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
+                    <div id="mission"><div class="box"><strong><a href=".">WINGS</a></strong> is a semantic workflow system that assists scientists with the design of computational experiments.  A unique feature of WINGS is that its workflow representations incorporate semantic constraints about datasets and workflow components, and are used to create and validate workflows and to generate metadata for new data products. WINGS submits workflows to execution frameworks such as <a href="http://pegasus.isi.edu">Pegasus</a> and <a href="http://oodt.apache.org">OODT</a> to run workflows at large scale in distributed resources. <a href="about">[more]</a>
+<ul id="missionlinks"> 
+  <li><a href="research">Research</a></li> 
+  <li><a href="node/43">Readings</a></li> 
+  <li><a href="people">People</a></li> 
+  <li><a href="node/42">Featured Workflows</a></li> 
+  <li><a href="http://wings-workflows.org/wings-portal/">Demo</a></li> 
+    <li><a href="download"><b>DOWNLOAD !</b></a></li> 
+ </ul>
+</div></div>    
+	</div>	
+  <!-- <h3 class="w3-center">ABOUT THE COMPANY</h3> 
   <p class="w3-center w3-large">Key features of our company</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
@@ -102,11 +129,11 @@ body, html {
       <p class="w3-large">Support</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
-  </div>
-</div>
+  </div> --> 
+
 
 <!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
+<!-- <div class="w3-container w3-light-grey" style="padding:128px 16px">
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h3>We know design.</h3>
@@ -117,10 +144,10 @@ body, html {
       <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
+<!-- <div class="w3-container" style="padding:128px 16px" id="team">
   <h3 class="w3-center">THE TEAM</h3>
   <p class="w3-center w3-large">The ones who runs this company</p>
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
@@ -169,10 +196,10 @@ body, html {
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Promo Section "Statistics" -->
-<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+<!-- <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
   <div class="w3-quarter">
     <span class="w3-xxlarge">14+</span>
     <br>Partners
@@ -189,10 +216,10 @@ body, html {
     <span class="w3-xxlarge">150+</span>
     <br>Meetings
   </div>
-</div>
+</div> -->
 
 <!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px" id="work">
+<!-- <div class="w3-container" style="padding:128px 16px" id="work">
   <h3 class="w3-center">OUR WORK</h3>
   <p class="w3-center w3-large">What we've done for people</p>
 
@@ -225,19 +252,19 @@ body, html {
       <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+<!--<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
     <img id="img01" class="w3-image">
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
-</div>
+</div> -->
 
 <!-- Skills Section -->
-<div class="w3-container w3-light-grey w3-padding-64">
+<!-- <div class="w3-container w3-light-grey w3-padding-64">
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h3>Our Skills.</h3>
@@ -261,10 +288,10 @@ body, html {
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Pricing Section -->
-<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+<!-- <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
   <h3>PRICING</h3>
   <p class="w3-large">Choose a pricing plan that fits your needs.</p>
   <div class="w3-row-padding" style="margin-top:64px">
@@ -317,10 +344,10 @@ body, html {
       </ul>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+<!-- <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
   <div class="w3-row-padding" style="margin-top:64px">
@@ -341,12 +368,12 @@ body, html {
         </p>
       </form>
     </div>
-    <div class="w3-half">
+    <div class="w3-half"> -->
       <!-- Add Google Maps -->
-      <div id="googleMap" class="w3-greyscale-max" style="width:100%;height:510px;"></div>
+     <!-- <div id="googleMap" class="w3-greyscale-max" style="width:100%;height:510px;"></div>
     </div>
   </div>
-</div>
+</div> --> 
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
