@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>WINGS-Download</title>
+<title>WINGS</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -33,10 +33,11 @@ body, html {
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="#research" class="w3-bar-item w3-button"><i class="fa fa-user"></i> RESEARCH</a>
+      <a href="#publications" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PUBLICATIONS</a>
+      <a href="#download" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> DOWNLOAD</a>
+      <a href="#tutorial" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> TUTORIAL</a>
+      <a href="#cite" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CITE</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -50,20 +51,34 @@ body, html {
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button">RESEARCH</a>
+  <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button">PUBLICATIONS</a>
+  <a href="#download" onclick="w3_close()" class="w3-bar-item w3-button">DOWNLOAD</a>
+  <a href="#tutorial" onclick="w3_close()" class="w3-bar-item w3-button">TUTORIAL</a>
+  <a href="#cite" onclick="w3_close()" class="w3-bar-item w3-button">CITE</a>
 </nav>
+
+<div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
+                    <div id="mission"><div class="box"><strong><a href=".">WINGS</a></strong> is a semantic workflow system that assists scientists with the design of computational experiments.  A unique feature of WINGS is that its workflow representations incorporate semantic constraints about datasets and workflow components, and are used to create and validate workflows and to generate metadata for new data products. WINGS submits workflows to execution frameworks such as <a href="http://pegasus.isi.edu">Pegasus</a> and <a href="http://oodt.apache.org">OODT</a> to run workflows at large scale in distributed resources. <a href="about">[more]</a>
+<ul id="missionlinks">
+  <li><a href="research">Research</a></li>
+  <li><a href="node/43">Readings</a></li>
+  <li><a href="people">People</a></li>
+  <li><a href="node/42">Featured Workflows</a></li>
+  <li><a href="http://wings-workflows.org/wings-portal/">Demo</a></li>
+    <li><a href="download"><b>DOWNLOAD !</b></a></li>
+ </ul>
+</div></div>
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  <div class="w3-display-left w3-text-black" style="padding:48px">
+    <!-- <span class="w3-jumbo w3-hide-small">WINGS</span><br>  //I don't think this is a good use of space-->
+    <!-- <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br> -->
+    <!-- <span class="w3-large">WINGS</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><div id="mission"><div class="box"><strong><a href=".">WINGS</a></strong> is a semantic workflow system that assists scientists with the design of computational experiments.  A unique feature of WINGS is that its workflow representations incorporate semantic constraints about datasets and workflow components, and are used to create and validate workflows and to generate metadata for new data products. WINGS submits workflows to execution frameworks such as <a href="http://pegasus.isi.edu">Pegasus</a> and <a href="http://oodt.apache.org">OODT</a> to run workflows at large scale in distributed resources. <a href="about">[more]</a></a></p> -->
   </div>
+
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -76,39 +91,27 @@ body, html {
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">Wings Portal Download Page</h3>
-  <p class="w3-center w3-large">WINGS (Workflow INstance Generation and Specialization) is a semantic workflow system. The WINGS Portal is provided as a WAR file (Web Application ARchive) and runs in a Tomcat Server. It is backed by a Jena TDB Triple store as the Knowledge Base, and the PELLET Reasoner to do reasoning over it. We also use basic Jena Rules to do component-level reasoning. </p>
-<p>The function of the WINGS Portal is to interact with users to provide assistance in creating workflows. It runs on a Web browser, so that no code needs to be installed or downloaded to interact with the system. It allows users to: 1) upload and describe datasets, 2) upload and describe workflow components, 3) create workflows, 4) set up and execute workflows, 5) examine execution results and their provenance. It has an open modular design and can be easily integrated with other existing workflow frameworks. It is built on open web standards from the World Wide Web Consortium (W3C) such as the Web Ontology Language (OWL), the Resource Description Framework (RDF), and the SPARQL query language for RDF.</p>
-<h3>Download</h3>
-<p>By clicking any of the following links and/or downloading the software they refer to by any other means you agree to comply with the <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License Version 2.0</a><br />
-For instructions on how to install Wings, please follow these <a href="https://raw.githubusercontent.com/IKCAP/wings/master/README">Installation Instructions</a></p>
-<ul>
-<li></p>
+  <h3 class="w3-center">WINGS</h3>
+  <p class="w3-center w3-large"><strong><a href=".">WINGS</a></strong> is a semantic workflow system that assists scientists with the design of computational experiments.  A unique feature of WINGS is that its workflow representations incorporate semantic constraints about datasets and workflow components, and are used to create and validate workflows and to generate metadata for new data products. WINGS submits workflows to execution frameworks such as <a href="http://pegasus.isi.edu">Pegasus</a> and <a href="http://oodt.apache.org">OODT</a> to run workflows at large scale in distributed resources.</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
       <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Download</p>
-      <p>By clicking any of the following links and/or downloading the software they refer to by any other means you agree to comply with the <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License Version 2.0</a><br />
-For instructions on how to install Wings, please follow these <a href="https://raw.githubusercontent.com/IKCAP/wings/master/README">Installation Instructions</a></p>
-<ul>
-<li>
-<h3><a href="../node/17663/release">Download Wings Portal</a></h3>
-</li></ul>
-<p>The Source code is available from github: <a href="https://github.com/IKCAP/wings" title="https://github.com/IKCAP/wings">https://github.com/IKCAP/wings</a></p>
+      <p class="w3-large">Research</p>
+      <p>.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
+      <p class="w3-large">Readings</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
+      <p class="w3-large">Demo</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
+      <p class="w3-large">Download</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
   </div>

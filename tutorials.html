@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>WINGS-Download</title>
+<title>WINGS-Tutorials</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -76,25 +76,137 @@ body, html {
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">Wings Portal Download Page</h3>
-  <p class="w3-center w3-large">WINGS (Workflow INstance Generation and Specialization) is a semantic workflow system. The WINGS Portal is provided as a WAR file (Web Application ARchive) and runs in a Tomcat Server. It is backed by a Jena TDB Triple store as the Knowledge Base, and the PELLET Reasoner to do reasoning over it. We also use basic Jena Rules to do component-level reasoning. </p>
-<p>The function of the WINGS Portal is to interact with users to provide assistance in creating workflows. It runs on a Web browser, so that no code needs to be installed or downloaded to interact with the system. It allows users to: 1) upload and describe datasets, 2) upload and describe workflow components, 3) create workflows, 4) set up and execute workflows, 5) examine execution results and their provenance. It has an open modular design and can be easily integrated with other existing workflow frameworks. It is built on open web standards from the World Wide Web Consortium (W3C) such as the Web Ontology Language (OWL), the Resource Description Framework (RDF), and the SPARQL query language for RDF.</p>
-<h3>Download</h3>
-<p>By clicking any of the following links and/or downloading the software they refer to by any other means you agree to comply with the <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License Version 2.0</a><br />
-For instructions on how to install Wings, please follow these <a href="https://raw.githubusercontent.com/IKCAP/wings/master/README">Installation Instructions</a></p>
+  <h3 class="w3-center">WINGS Workflow System Tutorial</h3>
+  <p class="w3-center w3-large">We have on-line hands-on  tutorial materials for three different types of users of Wings:</p>
 <ul>
-<li></p>
+<li> For <b><a href="#workflowUsers">workflow users</a></b>: These are users that want to browse and execute workflows that are already pre-defined in the system by others. </li>
+<li>For <b><a href="#workflowDevelopers">workflow developers</a></b>: These are users that want to create workflows using their own workflow components </li>
+<li>For <b><a href="#workflowAdmins">workflow administrators</a></b>: If you will be a workflow system administrator and would like to set up Wings on your site (either on a single machine such as a laptop, or on a grid, cluster, or cloud) </li>
+</ul>
+<hr />
+<br/>
+<h4><b><a id="#workflowUsers">Tutorials for Workflow Users</a></b></h4>
+<p>These are users that want to browse and execute workflows that are already pre-defined in the system by others.     We give you an easy overview of Wings based on a public <a href="http://www.wings-workflows.org/wings-portal/">''Portal'' </a>(a place to play around).  You can also create your own workflows using components that others have already pre-defined. Wings works in the browser, so there is no software to install if you use our web site and you can get started right away.</p>
+<p>    <a href="http://www.wings-workflows.org/tutorial/workflowUser">Here is an introductory tutorial for a workflow user</a>. The tutorial assumes that you are working on the Wings <a href="http://seagull.isi.edu:8080/wings-portal/">Portal</a>.  It covers the following topics:</p>
+<ol>
+<li><a href="/tutorial/workflowUser#Viewing_a_Workflow">Viewing a Workflow</a></li>
+<li><a href="/tutorial/workflowUser#Setting_Up_a_Workflow_by_Selecting_Data_and_Parameters">Setting Up a Workflow by Selecting Data and Parameters</a></li>
+<li><a href="/tutorial/workflowUser#Executing_a_Workflow">Executing a Workflow</a></li>
+<li><a href="/tutorial/workflowUser#Viewing_Execution_Results">Viewing Execution Results</a></li>
+</ol>
+<p>   It also describes how a workflow user can take advantage of these <b>unique features of Wings</b>:</p>
+<ol>
+<li><a href="/tutorial/workflowUser#Getting_Wings_to_Help_Set_Up_Workflow_Parameters">Getting Wings to Help Set Up Workflow Parameters</a></li>
+<li><a href="/tutorial/workflowUser#Getting_Wings_to_Help_You_Find_Relevant_Datasets">Getting Wings to Help You Find Relevant Datasets</a></li>
+<li><a href="/tutorial/workflowUser#Getting_Wings_to_Manage_the_Parallel_Processing_of_Collections_of_Data">Getting Wings to Manage the Parallel Processing of Collections of Data</a></li>
+<li><a href="/tutorial/workflowUser#Getting_Wings_to_Validate_Your_Workflow">Getting Wings to Validate Your Workflow</a></li>
+<li><a href="/tutorial/workflowUser#Getting_Wings_to_Specialize_an_Abstract_Workflow">Getting Wings to Specialize an Abstract Workflow</a></li>
+</ol>
+<p>As a more advanced user, you can also:</p>
+<ol>
+<li><a href="http://www.wings-workflows.org/tutorial/manage_data#upload_data">Upload More Data</a></li>
+<!--  <li><a href="http://www.wings-workflows.org/tutorial/manage_domain#change_engine">Change Execution Engine</a> --><!--  <li><a href="http://www.wings-workflows.org/tutorial/manage_domain#change_engine">Change Execution Engine</a> --></ol>
+<hr />
+<br/>
+<h4><b><a id="workflowDevelopers">Tutorials for Workflow Developers</a></b></h4>
+<p>  These are users that want to create workflows using their own workflow components.  For this, we have set up a <a href="http://www.wings-workflows.org/wings-portal">second public site</a> where you can test your  own components and workflows without having to install any software.(requires login, <a href="mailto:gil@isi.edu?Subject=URL%20Encoded%20Subject&amp;body=Body%20requesting%20a%20Wings%20Portal%20account">email us to set up an account</a>) .<br />
+Here are some tutorials for advanced users that want to create new workflows and workflow components:</p>
+<p>There are two ways to start developing your own templates in WINGS:</p>
+<ol>
+<li>Create your own domain.
+<ul>
+<li>When you start with WINGS, there will be one domain in your user profile, "blank." You can use this "blank" domain to test the WINGS system, but soon you will want to  <a href =http://www.wings-workflows.org/tutorial/manage_domain><b>create a new domain</b></a> with a descriptive title that reflects the types of templates you will create. </li>
+<li>Then, you will want to <a href= http://www.wings-workflows.org/tutorial/manage_data><b>manage your data</b></a>, <a href= http://www.wings-workflows.org/tutorial/manage_component_types><b>manage component types</b></a>, <a href= http://www.wings-workflows.org/tutorial/manage_components><b>manage components</b></a>,<br />
+and finally <a href= http://www.wings-workflows.org/tutorial/edit_workflows><b>create your own workflows</b></a>.</li>
+</ul>
+</li>
+<li>Use templates from other people's domains as a starting point and adapt their templates to your needs.
+<ul>
+<li>If another workflow developer has already created templates that include parts you wish to repurpose for your own workflow needs, you can download their domain into your user account. This way you can edit, add, and delete parts of workflows without affecting the work of others.</li>
+<li>In order to transfer a domain, the owner of that domain will have to download the domain from the <a href= http://www.wings-workflows.org/tutorial/manage_domain><b>"Manage Domains"</b></a> page of their WINGS account. They can then send you a zip file with that domain, which you can then upload into your account from the <a href= http://www.wings-workflows.org/tutorial/manage_domain><b>"Manage Domains"</b></a> page.  Click "Add" and select the option for "Import Domain."</li>
+<li>You can now edit the domain as you need to, but still make sure to follow the tutorial below and read the user tips.</li>
+</ul>
+</li>
+</ol>
+
+<p><b>User Tips</b></p>
+<p><ul>
+<li>General
+<ul>
+<li><b>Name choices</b>: Make sure to leave no spaces in the names of categories, components, data types, file names, etc.. Double check that you do not have an extra spaces before saving. If you get an error message when you try to save your work, it is very possible that you have an extra space. </li>
+<li><b>Designing ahead</b>: Design the workflow before creating components. This will avoid having to go back and change components and workflows once you have begun creating a new template. </li>
+<li><b>Documentation</b>: Make sure to provide documentation for both your templates and your components. Proper documentation allows others to follow and reuse your workflows. Description of needed data sets is also important.</li>
+</ul>
+</li>
+<li>Components
+<ul>
+<li><b>Changes</b>: If you change a component, and a workflow contains this component, then the workflow must be erased and recreated in order to incorporate the new definition of the component.</li>
+<li><b>Collections</b>: When using collections of data, remember to specify the dimensionality of the input and output of the component that the data is going in. When you want to create a split component, make sure to change the dimension of the output to 1-D rather than 0-D. </li>
+</ul>
+</li>
+<li>Data
+<ul>
+<li><b>Definitions</b>: Define data types before working on component types, because in order to define components you need data types to specify the inputs and outputs.</li>
+</ul>
+</li>
+</ul>
+</p>
+<ol>
+<li><a href="http://www.wings-workflows.org/tutorial/manage_data">Manage Data</a> <em>-- add datatypes, upload data, add metadata properties</em>
+              </li>
+<li><a href="http://www.wings-workflows.org/tutorial/manage_component_types">Manage Components Types</a> <em>-- add categories for components, add abstract component types</em></li>
+<li><a href="http://www.wings-workflows.org/tutorial/manage_components">Manage Components</a> <em>-- add components, upload component code</em>
+              </li>
+<li><a href="http://www.wings-workflows.org/tutorial/edit_workflows">Edit Workflows</a> <em>-- create workflow templates</em>
+              </li>
+<li><a href="http://www.wings-workflows.org/tutorial/manage_domain">Manage Domain</a> <em>-- set working domain, change execution engine, import system domains</em>
+              </li>
+</ol>
+<p>   As a Workflow developer, you can take advantage of these <b>unique features of Wings</b>:</p>
+<ol>
+<li><a href="/tutorial/workflowUser#Getting_Wings_to_Automatically_Select_Workflow_Components">Getting Wings to Automatically Select Workflow Components</a></li>
+<li><a href="/tutorial/workflowUser#Getting_Wings_to_Automatically_Generate_Metadata">Getting Wings to Automatically Generate Metadata</a></li>
+<li><a href="/tutorial/workflowUser#Creating_Valid_Workflow_Templates">Creating Valid Workflow Templates</a></li>
+<li><a href="/tutorial/interleavingXP">Interleaving Execution and Planning</a></li>
+</ol>
+<p>    Here is a Video to create and run a sample Text Analytics Workflow:<br />
+   <iframe width="420" height="315" src="http://www.youtube.com/embed/p6yhkr1lywM" frameborder="0" allowfullscreen></iframe></p>
+<p>    To use the <a href="http://www.wings-workflows.org/wings-portal">''Wings Portal''</a>, you would need to:</p>
+<ul>
+<li> <a href="mailto:gil@isi.edu?Subject=URL%20Encoded%20Subject&amp;body=Body%20requesting%20a%20Wings%20Portal%20account">Email us to set up an account</a>.
+      </li>
+<li>  Follow our <a href="http://wiki.wings-workflows.org/index.php/Defining_new_Data_and_Component_Catalogs_Tutorial">Defining new Data and Component Catalogs Tutorial</a>
+      </li>
+</ul>
+<p>    As an additional aid for workflow developers, we have developed the <a href="http://wiki.wings-workflows.org/index.php/Basic_Component_Encapsulation">Basic Component Encapsulation (BCE)</a> methodology for creating workflow components.  It helps avoid simple modeling errors, but it is not a requirement for Wings.  There is <a href="http://wiki.wings-workflows.org/index.php/Basic_Component_Encapsulation">detailed documentation</a> and  <a href="http://wiki.wings-workflows.org/index.php/Example_BCE_Compatible_Scripts">Example BCE Compatible Scripts</a></p>
+<hr/>
+<br/>
+<h4><b><a id="install"><a id="workflowAdmins">Instructions for Workflow Administrators</a></a></b></h4>
+<ul>
+<li><a href="https://raw.githubusercontent.com/IKCAP/wings/master/README">Installation Instructions</a> <em>--If you will be a workflow system administrator and would like to Install Wings on your site</em>
+    </li>
+<li><a href="/tutorial/manage_resources">Manage Resources</a> <em>-- define machines and infrastructure software installed on them</em></li>
+<li><a href="/tutorial/manage_users">Manage Users</a> <em>-- add/delete system users</em></li>
+</ul>
+<!--If you will be a workflow system administrator and would like to set up Wings on your site (either on a single machine such as a laptop, or on a grid, cluster, or cloud), you can <a href="http://www.wings-workflows.org/download">download the Wings software here</a>.  Wings is released under an open source license.  </p>
+   <ul>
+    <li>  <a href="http://wiki.wings-workflows.org/index.php/Installing_Wings_Portal_on_Linux">Installing Wings Portal on Linux</a>
+    </li><li>  <a href="http://wiki.wings-workflows.org/index.php/Installing_Wings_Portal_on_MacOS">Installing Wings Portal on MacOS</a>
+    </li></ul>
+--><!--If you will be a workflow system administrator and would like to set up Wings on your site (either on a single machine such as a laptop, or on a grid, cluster, or cloud), you can <a href="http://www.wings-workflows.org/download">download the Wings software here</a>.  Wings is released under an open source license.  </p>
+   <ul>
+    <li>  <a href="http://wiki.wings-workflows.org/index.php/Installing_Wings_Portal_on_Linux">Installing Wings Portal on Linux</a>
+    </li><li>  <a href="http://wiki.wings-workflows.org/index.php/Installing_Wings_Portal_on_MacOS">Installing Wings Portal on MacOS</a>
+    </li></ul>
+--><hr />
+<br/>
+<h4><b>Glossary</b></h4>
+<p>A Glossary of WINGS terms used in the tutorial <a href="/tutorial/workflowUser#Glossary">can be found here</a></p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
       <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Download</p>
-      <p>By clicking any of the following links and/or downloading the software they refer to by any other means you agree to comply with the <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License Version 2.0</a><br />
-For instructions on how to install Wings, please follow these <a href="https://raw.githubusercontent.com/IKCAP/wings/master/README">Installation Instructions</a></p>
-<ul>
-<li>
-<h3><a href="../node/17663/release">Download Wings Portal</a></h3>
-</li></ul>
-<p>The Source code is available from github: <a href="https://github.com/IKCAP/wings" title="https://github.com/IKCAP/wings">https://github.com/IKCAP/wings</a></p>
+      <p class="w3-large">Responsive</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
