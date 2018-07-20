@@ -1,93 +1,76 @@
-<!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<!-----><link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-body, html {
-    height: 100%;
-    line-height: 1.8;
-}
-/* Full height image header */
-.bgimg-1 {
-    background-position: center;
-    background-size: cover;
-    background-image: url("/w3images/mac.jpg");
-    min-height: 100%;
-}
-.w3-bar .w3-button {
-    padding: 16px;
-}
-</style>
-<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="sites/default/files/garland_favicon.png" type="image/x-icon" />
+    <title>About :: </title>
+    <link type="text/css" rel="stylesheet" media="all" href="modules/node/node.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="modules/system/defaults.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="modules/system/system.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="modules/system/system-menus.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="modules/user/user.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="modules/forum/forum.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="modules/project/project.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="modules/project/release/project_release.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="sites/all/modules/biblio/biblio.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="modules/views/css/views.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="themes/garland/style.css?7" />
+<link type="text/css" rel="stylesheet" media="all" href="themes/garland/mystyle.css?7" />
+<link type="text/css" rel="stylesheet" media="print" href="themes/garland/print.css?7" />
+    
+<script type="text/javascript" src="misc/drupal.js?7"></script>
+<script type="text/javascript" src="modules/views/js/base.js?7"></script>
+<script type="text/javascript" src="modules/views/js/ajax_view.js?7"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/views/ajax", "/views/ajax", "/views/ajax" ], "ajaxViews": { "views_dom_id:04ad9aa558618c790416596d0260ca84": { "view_name": "LatestReleases", "view_display_id": "block_1", "view_args": "", "view_path": "node/1", "view_base_path": null, "view_dom_id": "04ad9aa558618c790416596d0260ca84", "pager_element": 0 }, "views_dom_id:0527b6aba622c336a6d7389deee0cb1b": { "view_name": "News", "view_display_id": "block_1", "view_args": "", "view_path": "node/1", "view_base_path": null, "view_dom_id": "0527b6aba622c336a6d7389deee0cb1b", "pager_element": 0 }, "views_dom_id:d8d772d8d973e83d1fadcc10c781f9a3": { "view_name": "Publications", "view_display_id": "block_1", "view_args": "", "view_path": "node/1", "view_base_path": null, "view_dom_id": "d8d772d8d973e83d1fadcc10c781f9a3", "pager_element": 0 } } } });
+//--><!]]>
+</script>
+    <!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/themes/garland/fix-ie.css" />    <![endif]-->
+  <meta name="description" content="">
+</head>
+  <body class="sidebar-right">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+<!-- Layout -->
+  <div id="header-region" class="clear-block"></div>
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
+    <div id="wrapper">
+    <div id="container" class="clear-block">
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
+      <div id="header">
+        <div id="logo-floater">
+        <h1>About, </h1>        </div>
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
-  </div> 
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-</header>
+                  <ul class="links primary-links"><li class="menu-400 first"><a href="index.html" title="">Home</a></li>
+<li class="menu-284 active-trail active"><a href="about.html" title="About the Wings Project" class="active">About</a></li>
+<li class="menu-220"><a href="research.html" title="Research details">Research</a></li>
+<li class="menu-219"><a href="publications.html" title="Wings related publications">Publications</a></li>
+<li class="menu-227"><a href="download-wings-portal.html" title="Download Wings">Download</a></li>
+<li class="menu-477"><a href="tutorial.html" title="Wings Workflow System Tutorial">Tutorial</a></li>
+<li class="menu-589 last"><a href="cite.html" title="">Cite</a></li>
+</ul>                                  
+      </div> <!-- /header -->
 
-<!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">ABOUT</h3>
-  <p class="w3-center w3-large">Key features of our company</p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="content clear-block">
-    <p><strong><a href="./">WINGS</a> is a semantic workflow system</strong> that assists scientists with the design of computational experiments.  A computational experiment specifies how selected datasets are to be processed by a series of software components in a particular configuration. Earth scientists use computational experiments to estimate seismic hazard through simulations of earthquake forecasts. Biologists use computational experiments for analysis of gene expression microarray data or molecular interaction networks and pathways. Social scientists analyze large social networks to discover structural regularities based on mining relations among individuals. </p>
-<p><strong>A unique feature of <a href="./">WINGS</a> is that its workflow representations incorporate semantic constraints</strong> about datasets and workflow components.  <a href="./">WINGS</a> reasons about dataset properties and component constraints to create and validate workflows and to generate metadata for new data products. <a href="./">WINGS</a> uses <a href="http://pegasus.isi.edu">Pegasus</a> or <a href="http://oodt.apache.org">OODT</a> as the execution engine for large-scale distributed workflow execution.  A high-level diagram of architecture of <a href="./">WINGS</a> is shown here: </p>
+      
+      <div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
+          <div class="breadcrumb"><a href="/">Home</a></div>                              <h2>About, </h2>                                                  <div class="clear-block">
+            <div id="node-1" class="node">
+
+
+
+  
+  <div class="content clear-block">
+    <p><strong><a href="index.html">WINGS</a> is a semantic workflow system</strong> that assists scientists with the design of computational experiments.  A computational experiment specifies how selected datasets are to be processed by a series of software components in a particular configuration. Earth scientists use computational experiments to estimate seismic hazard through simulations of earthquake forecasts. Biologists use computational experiments for analysis of gene expression microarray data or molecular interaction networks and pathways. Social scientists analyze large social networks to discover structural regularities based on mining relations among individuals. </p>
+<p><strong>A unique feature of <a href="index.html">WINGS</a> is that its workflow representations incorporate semantic constraints</strong> about datasets and workflow components.  <a href="index.html">WINGS</a> reasons about dataset properties and component constraints to create and validate workflows and to generate metadata for new data products. <a href="index.html">WINGS</a> uses <a href="http://pegasus.isi.edu">Pegasus</a> or <a href="http://oodt.apache.org">OODT</a> as the execution engine for large-scale distributed workflow execution.  A high-level diagram of architecture of <a href="index.html">WINGS</a> is shown here: </p>
 <p><img src="./sites/default/files/Architecture-Color.jpg" /> </p>
-<p><strong><a href="./">WINGS</a> allows users to express high-level descriptions of their analysis goals,</strong> and assists them by automatically and systematically generating possible workflows that are consistent with that request.  A high-level user request is one that only partially specifies what datasets, parameters, or software components are to be used.  Users can be assisted in an interactive mode, where <a href="./">WINGS</a> generates suggestions and validates their inputs, or in an automatic mode, where <a href="./">WINGS</a> can elaborate their initial request and present the user with execution-ready workflows as options.  <a href="./">WINGS</a> generates workflows in three-stages search process. First it selects components for each step in the workflow. Then it selects datasets from the catalogs to elaborate the initial workflow request and its template. Finally it configures the parameters for each component in the workflow.  During the search process, <a href="./">WINGS</a> eliminates workflow candidates that are not viable because they contain invalid combinations of choices.  Once a workflow candidate is fully elaborated, <a href="./">WINGS</a> expands the workflow to specify any parallel computations over dataset collections. For all the new data products, it generates metadata attributes by propagating metadata from the input data through the descriptions and constraints specified for each of the components. The entire workflow creation and generation process is annotated in detail in a provenance catalog for later inspection.</p>
-<p><strong><a href="./">WINGS</a> is built on open web standards</strong> from the World Wide Web Consortium (W3C) such as the Web Ontology Language (OWL), the Resource Description Framework (RDF), and the SPARQL query language for RDF.  The core ontologies are defined in OWL, while workflow templates, requests, and candidates are expressed in RDF. Many constraints are represented as RDF triples, others that are more complex are represented via Jena Rules.</p>
-<p><strong>The <a href="./">WINGS</a> workflow system has an open modular design</strong> and can be easily integrated with other existing workflow systems and execution frameworks to extend them with semantic reasoning capabilities. We have integrated the Wings semantic workflow system with a variety of user interfaces, and submitted workflows with a variety of execution engines.  <a href="./">WINGS</a> assumes external catalogs of software components and datasets that can be accessed through services. This is an important feature, since scientific environments consist of distributed services to access the data and algorithms necessary for data analysis. Many collaborations are set up where each institution may contribute resources (data, instruments, computers, software) by making them available to others while being maintained by the institution. Data providers may provide services to access data sources. There can be many organizations playing the role of data providers, and as a result data may be accessible in various catalogs that are in distributed remote locations. Other organizations may provide algorithms, services, models, or implemented codes that can process data and can be used as components of workflows. Each provider maintains the resources they contribute. Therefore, the <a href="./">WINGS</a> architecture is designed to interface with external data and component catalogs.</p>
-<p><strong><a href="./">WINGS</a> provides a range of workflow execution alternatives.</strong>  In cases where privacy or off-line use are important, <a href="./">WINGS</a> can submit workflows in a scripted format for execution in the local host.  In cases where scale is important, <a href="./">WINGS</a> can submit workflows to Pegasus or OODT which will manage their execution in shared distributed resources in an efficient and scalable manner. Pegasus selects computational resources, optimizes the workflow structure, submits the workflow for execution, monitors its progress, and resolves possible failures. <a href="./">WINGS</a> has also been integrated with a variety of alternative execution engines, such as the System S engine for data stream processing and BPEL4WS engines.</p>
-<p><strong><a href="./">WINGS</a> can be used as a web application without requiring users to install any software.</strong>  We offer a <a href="/sandbox">WINGS sandbox</a> where anyone can use <a href="./">WINGS</a> with a simple set of workflows that we have developed for tutorial purposes. The Wings Semantic Workflow Reasoner runs in the background, the user interface is the Wings Web Portal, and the execution is done by <a href="http://pegasus.isi.edu">Pegasus</a> or <a href="http://oodt.apache.org">OODT</a>.</p>
+<p><strong><a href="index.html">WINGS</a> allows users to express high-level descriptions of their analysis goals,</strong> and assists them by automatically and systematically generating possible workflows that are consistent with that request.  A high-level user request is one that only partially specifies what datasets, parameters, or software components are to be used.  Users can be assisted in an interactive mode, where <a href="index.html">WINGS</a> generates suggestions and validates their inputs, or in an automatic mode, where <a href="index.html">WINGS</a> can elaborate their initial request and present the user with execution-ready workflows as options.  <a href="index.html">WINGS</a> generates workflows in three-stages search process. First it selects components for each step in the workflow. Then it selects datasets from the catalogs to elaborate the initial workflow request and its template. Finally it configures the parameters for each component in the workflow.  During the search process, <a href="index.html">WINGS</a> eliminates workflow candidates that are not viable because they contain invalid combinations of choices.  Once a workflow candidate is fully elaborated, <a href="index.html">WINGS</a> expands the workflow to specify any parallel computations over dataset collections. For all the new data products, it generates metadata attributes by propagating metadata from the input data through the descriptions and constraints specified for each of the components. The entire workflow creation and generation process is annotated in detail in a provenance catalog for later inspection.</p>
+<p><strong><a href="index.html">WINGS</a> is built on open web standards</strong> from the World Wide Web Consortium (W3C) such as the Web Ontology Language (OWL), the Resource Description Framework (RDF), and the SPARQL query language for RDF.  The core ontologies are defined in OWL, while workflow templates, requests, and candidates are expressed in RDF. Many constraints are represented as RDF triples, others that are more complex are represented via Jena Rules.</p>
+<p><strong>The <a href="index.html">WINGS</a> workflow system has an open modular design</strong> and can be easily integrated with other existing workflow systems and execution frameworks to extend them with semantic reasoning capabilities. We have integrated the Wings semantic workflow system with a variety of user interfaces, and submitted workflows with a variety of execution engines.  <a href="index.html">WINGS</a> assumes external catalogs of software components and datasets that can be accessed through services. This is an important feature, since scientific environments consist of distributed services to access the data and algorithms necessary for data analysis. Many collaborations are set up where each institution may contribute resources (data, instruments, computers, software) by making them available to others while being maintained by the institution. Data providers may provide services to access data sources. There can be many organizations playing the role of data providers, and as a result data may be accessible in various catalogs that are in distributed remote locations. Other organizations may provide algorithms, services, models, or implemented codes that can process data and can be used as components of workflows. Each provider maintains the resources they contribute. Therefore, the <a href="index.html">WINGS</a> architecture is designed to interface with external data and component catalogs.</p>
+<p><strong><a href="index.html">WINGS</a> provides a range of workflow execution alternatives.</strong>  In cases where privacy or off-line use are important, <a href="index.html">WINGS</a> can submit workflows in a scripted format for execution in the local host.  In cases where scale is important, <a href="index.html">WINGS</a> can submit workflows to Pegasus or OODT which will manage their execution in shared distributed resources in an efficient and scalable manner. Pegasus selects computational resources, optimizes the workflow structure, submits the workflow for execution, monitors its progress, and resolves possible failures. <a href="index.html">WINGS</a> has also been integrated with a variety of alternative execution engines, such as the System S engine for data stream processing and BPEL4WS engines.</p>
+<p><strong><a href="index.html">WINGS</a> can be used as a web application without requiring users to install any software.</strong>  We offer a <a href="sandbox.html">WINGS sandbox</a> where anyone can use <a href="index.html">WINGS</a> with a simple set of workflows that we have developed for tutorial purposes. The Wings Semantic Workflow Reasoner runs in the background, the user interface is the Wings Web Portal, and the execution is done by <a href="http://pegasus.isi.edu">Pegasus</a> or <a href="http://oodt.apache.org">OODT</a>.</p>
 <p>There are several Wings installations (ranging from older versions to newer versions) that contain workflows in diverse application areas, all of them require setting up an account to access:</p>
 <ul>
 <li><a href="http://seagull.isi.edu/marbles">Marbles</a> contains Data Mining Workflows based on the popular Weka data mining software</li>
@@ -95,311 +78,176 @@ body, html {
 <li><a href="http://www.pagestudy.org">Population Architecture using Genomics and Epidemiology (PAGE)</a> contains workflows to relate genetic variants to phenotypic data</li>
 <li><a href="http://pedwork.isi.edu/portal/">PedWorkflows</a> includes workflows for student assessment</li>
 </ul>
-<p>To download and install the <a href="./">WINGS</a> software, <a href="./download">visit our release pages</a></p>
+<p>To download and install the <a href="index.html">WINGS</a> software, <a href="download.html">visit our release pages</a></p>
   </div>
-  </div>
-</div>
 
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>We know design.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
-    </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-    </div>
-  </div>
-</div>
-
-<!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who runs this company</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+  <div class="clear-block">
+    <div class="meta">
         </div>
+
       </div>
+
+</div>
+          </div>
+                    <div id="footer">We are grateful for funding from the National Science Foundation under grants CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants NIH U24 MH068457 and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants HR0011-07-C-0060 and W911NF-15-1-0555, and from the Air Force Research Laboratory under grant FA8750-06-C-0210.</div>
+      </div></div></div></div> <!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
+
+              <div id="sidebar-right" class="sidebar">
+                    <div id="block-search-0" class="clear-block block block-search">
+
+
+  <div>
+<div itemscope="" itemtype="http://schema.org/Product">
+<span itemprop="name">about rating</span>
+<div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+<span itemprop="ratingValue">5-5</span> stars based on
+<span itemprop="reviewCount">175</span> reviews
+</div>
+</div>
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-qovV46hOBU2XOKNh0gBQCgliqggBRBFQH-kdXz0pc6Q" value="form-qovV46hOBU2XOKNh0gBQCgliqggBRBFQH-kdXz0pc6Q"  />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</div>
+
+</div></form>
+</div>
+</div>
+<div id="block-user-1" class="clear-block block block-user">
+
+
+  <div class="content"><ul class="menu"><li class="collapsed first last"><a href="publications.html">Publications</a></li>
+</ul></div>
+</div>
+<div id="block-views-LatestReleases-block_1" class="clear-block block block-views">
+
+  <h2>Latest Releases</h2>
+
+  <div class="content"><div class="view view-LatestReleases view-id-LatestReleases view-display-id-block_1 view-dom-id-04ad9aa558618c790416596d0260ca84">
+    
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-1">
+        <thead>
+      <tr>
+                  <th class="views-field views-field-title">
+                      </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first views-row-last">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17664">Wings Portal <span>4.0-SNAPSHOT</span></a>          </td>
+              </tr>
+      </tbody>
+</table>
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Anja Doe</h3>
-          <p class="w3-opacity">Art Director</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+  
+  
+  
+  
+  
+  
+</div></div>
+</div>
+<div id="block-views-News-block_1" class="clear-block block block-views">
+
+  <h2>Latest News</h2>
+
+  <div class="content"><div class="view view-News view-id-News view-display-id-block_1 view-dom-id-0527b6aba622c336a6d7389deee0cb1b">
+    
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-1">
+        <thead>
+      <tr>
+                  <th class="views-field views-field-title">
+                      </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title" >
+            04/10/2017 - 08:08: <a href="/node/17689">Towards data narratives for WINGS workflows</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            04/10/2017 - 08:03: <a href="/node/17688">WINGS available as a Docker image</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            05/08/2016 - 22:07: <a href="/node/17684">Cluster computing with Wings</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            04/01/2016 - 01:34: <a href="/node/17683">Wings  is now integrated in the Disk portal</a>          </td>
+              </tr>
+          <tr class="odd views-row-last">
+                  <td class="views-field views-field-title" >
+            04/01/2016 - 01:30: <a href="/node/17682">A new release of the Wings provenance export is online!</a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+</div>
+<div id="block-views-Publications-block_1" class="clear-block block block-views">
+
+  <h2>Recent Publications</h2>
+
+  <div class="content"><div class="view view-Publications view-id-Publications view-display-id-block_1 view-dom-id-d8d772d8d973e83d1fadcc10c781f9a3">
+    
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-1">
+        <thead>
+      <tr>
+                  <th class="views-field views-field-title">
+                      </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17679">Dynamically Generated Metadata and Replanning by Interleaving Workflow Generation and Execution</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17678">Teaching Big Data Analytics Skills with Intelligent Workflow Systems</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17681">Use of Semantic Workflows to Enhance Transparency and Reproducibility in Clinical Omics</a>          </td>
+              </tr>
+          <tr class="even views-row-last">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17680">OntoSoft: Capturing Scientific Software Metadata</a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+</div>
         </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Web Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-        <div class="w3-container">
-          <h3>Dan Star</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
+      
+    </div> <!-- /container -->
   </div>
-</div>
+<!-- /layout -->
 
-<!-- Promo Section "Statistics" -->
-<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">14+</span>
-    <br>Partners
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">55+</span>
-    <br>Projects Done
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">89+</span>
-    <br>Happy Clients
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">150+</span>
-    <br>Meetings
-  </div>
-</div>
-
-<!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large">What we've done for people</p>
-
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
-    </div>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Skills Section -->
-<div class="w3-container w3-light-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Our Skills.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Pricing Section -->
-<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
-  <h3>PRICING</h3>
-  <p class="w3-large">Choose a pricing plan that fits your needs.</p>
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16"><b>10GB</b> Storage</li>
-        <li class="w3-padding-16"><b>10</b> Emails</li>
-        <li class="w3-padding-16"><b>10</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 10</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-third">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 25</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 50</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-half">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
-      <br>
-      <form action="/action_page.php" target="_blank">
-        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-        <p>
-          <button class="w3-button w3-black" type="submit">
-            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-          </button>
-        </p>
-      </form>
-    </div>
-    <div class="w3-half">
-      <!-- Add Google Maps -->
-      <div id="googleMap" class="w3-greyscale-max" style="width:100%;height:510px;"></div>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
- 
-<!-- Add Google Maps -->
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-    } else {
-        mySidebar.style.display = 'block';
-    }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-
-</body>
+    </body>
 </html>

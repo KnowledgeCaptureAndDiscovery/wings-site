@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="sites/default/files/garland_favicon.png" type="image/x-icon" />
-    <title>Research | WINGS</title>
+    <title>Wings Portal Download Page | WINGS</title>
     <link type="text/css" rel="stylesheet" media="all" href="modules/node/node.css?I" />
 <link type="text/css" rel="stylesheet" media="all" href="modules/system/defaults.css?I" />
 <link type="text/css" rel="stylesheet" media="all" href="modules/system/system.css?I" />
@@ -25,7 +25,7 @@
 <script type="text/javascript" src="modules/views/js/ajax_view.js?I"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/views/ajax", "/views/ajax", "/views/ajax" ], "ajaxViews": { "views_dom_id:70e2f3e0b2a7e073ae160aa36186bdca": { "view_name": "LatestReleases", "view_display_id": "block_1", "view_args": "", "view_path": "node/2", "view_base_path": null, "view_dom_id": "70e2f3e0b2a7e073ae160aa36186bdca", "pager_element": 0 }, "views_dom_id:211c6dae6190125961a95914de4f0dab": { "view_name": "News", "view_display_id": "block_1", "view_args": "", "view_path": "node/2", "view_base_path": null, "view_dom_id": "211c6dae6190125961a95914de4f0dab", "pager_element": 0 }, "views_dom_id:19770e68dd9ced5a65da2c99cd29072f": { "view_name": "Publications", "view_display_id": "block_1", "view_args": "", "view_path": "node/2", "view_base_path": null, "view_dom_id": "19770e68dd9ced5a65da2c99cd29072f", "pager_element": 0 } } } });
+jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/views/ajax", "/views/ajax", "/views/ajax" ], "ajaxViews": { "views_dom_id:472f5980058ee90ef985f99eb555dc6b": { "view_name": "LatestReleases", "view_display_id": "block_1", "view_args": "", "view_path": "node/17662", "view_base_path": null, "view_dom_id": "472f5980058ee90ef985f99eb555dc6b", "pager_element": 0 }, "views_dom_id:74a7959f53be1409b61da8a15937e4f1": { "view_name": "News", "view_display_id": "block_1", "view_args": "", "view_path": "node/17662", "view_base_path": null, "view_dom_id": "74a7959f53be1409b61da8a15937e4f1", "pager_element": 0 }, "views_dom_id:f45fc5367b24b0dbd981ae0412039728": { "view_name": "Publications", "view_display_id": "block_1", "view_args": "", "view_path": "node/17662", "view_base_path": null, "view_dom_id": "f45fc5367b24b0dbd981ae0412039728", "pager_element": 0 } } } });
 //--><!]]>
 </script>
     <!--[if lt IE 7]>
@@ -43,12 +43,11 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/vi
         <div id="logo-floater">
         <h1><a href="index.html" title=""><img src="sites/default/files/garland_logo.png" alt="" id="logo" /></a></h1>        </div>
 
-
                   <ul class="links primary-links"><li class="menu-400 first"><a href="index.html" title="">Home</a></li>
 <li class="menu-284"><a href="about.html" title="About the Wings Project">About</a></li>
-<li class="menu-220 active-trail active"><a href="research.html" title="Research details" class="active">Research</a></li>
+<li class="menu-220"><a href="research.html" title="Research details">Research</a></li>
 <li class="menu-219"><a href="publications.html" title="Wings related publications">Publications</a></li>
-<li class="menu-227"><a href="download-wings-portal.html" title="Download Wings">Download</a></li>
+<li class="menu-227 active-trail active"><a href="download-wings-portal.html" title="Download Wings" class="active">Download</a></li>
 <li class="menu-477"><a href="tutorial.html" title="Wings Workflow System Tutorial">Tutorial</a></li>
 <li class="menu-589 last"><a href="cite.html" title="">Cite</a></li>
 </ul>                                  
@@ -56,39 +55,24 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/vi
 
       
       <div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
-          <div class="breadcrumb"><a href="index.html">Home</a></div>                              <h2>Research</h2>                                                  <div class="clear-block">
-            <div id="node-2" class="node">
+          <div class="breadcrumb"><a href="index.html">Home</a></div>                              <h2>Wings Portal Download Page</h2>                                                  <div class="clear-block">
+            <div id="node-17662" class="node">
 
 
 
   
   <div class="content clear-block">
-    <p>At the core of the WINGS architecture are workflow generation and validation algorithms that propagate semantic constraints about datasets and components throughout the structure of the workflow.  These algorithms are used in a variety of ways to assist users in creating valid workflows, and can automate important aspects of workflow generation:</p>
-<ol>
-<li> <strong>Reuse of workflows</strong>: rather than having to create a new workflow from scratch, a user would be presented with workflows already created by others and that fit their analysis goals and that contain semantic constraints that determine what datasets are appropriate for a given workflow. To accomplish this, Wings offers a library of pre-defined semantic workflows that you can reuse.<br />
-<a href="/sandbox/wpshorttutorial.html#Running_a_Workflow:_The_Basics">See how this is done and try it out!</a>.</li>
-<li> <strong>Assisting users in using methods correctly</strong>: a researcher may have detailed knowledge of the general principles involved in an analysis, but may not be familiar with the detailed requirements of the analytic software to be used. Wings offers assistance in setting up method parameter values that are appropriate for the properties of your datasets.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Help_Set_Up_Workflow_Parameters">See how this is done and try it out!</a>.</li>
-<li> <strong>Finding relevant data</strong>: a researcher that has data they have collected in their lab and is being processed by a selected workflow would wonder if there are other data collected by others that she could use to strengthen her claims. Wings makes suggestions of datasets that are available and are consistent with the user's current workflow.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Help_You_Find_Relevant_Datasets">See how this is done and try it out!</a>.</li>
-<li> <strong>Managing parallelism for large collections of data</strong>: researchers that use large collections of data could benefit from workflow parallelization and concurrency mechanisms that the system would automatically setup by reasoning about the semantics of the workflows and their treatment of data. Wings can represent data collections and generate automatically individual parallel computations.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Manage_the_Parallel_Processing_of_Collections_of_Data">See how this is done and try it out!</a>.</li>
-<li> <strong>Reproducing published results</strong>: rather than having to read the published articles and set up the software, a researcher could retrieve the workflow used in that article and easily re-execute it and/or examine its setup. To support this, Wings allows the reuse of workflow templates created by others while<br />
-ensuring that the workflows that you set up are valid.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Validate_Your_Workflow">See how this is done and try it out!</a>.</li>
-<li> <strong>Incorporating the latest analytic tools</strong>: an expert researcher would like their workflow to always include the latest algorithms that are published and that perform a certain function in their analysis. To accomplish this, Wings can represent classes of components as workflow steps and automatically specialize them to executable components.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Specialize_an_Abstract_Workflow">See how this is done and try it out!</a>.</li>
-<li> <strong>Automatic triggering of analyses when new relevant data becomes available</strong>: a researcher can set up a type of analysis to be automatically run and updated by the system and send her notifications when completed.<br />
-Wings can represent an abstract workflow containing classes of workflow steps, and customize it automatically to the new datasets.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Automatically_Select_Workflow_Components">See how this is done and try it out!</a>.</li>
-<li> <strong>Automatic generation of metadata</strong>: the workflow system can automatically generate metadata for new data products resulting from workflow execution. Wings uses the metadata properties of your datasets to figure out what will be the metadata of the results of workflow execution<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Automatically_Generate_Metadata">See how this is done and try it out!</a>.</li>
-<li> <strong>Assisting to create a variant of an existing workflow</strong>: a researcher wants to make small changes to an existing workflow, the system can assist them to make sure the resulting workflow is valid. Wings can automatically elaborate templates by propagating semantic constraints and alerting users when the modifications they make are not valid.<br />
-<a href="/sandbox/wpshorttutorial.html#Creating_Valid_Workflow_Templates">See how this is done and try it out!</a>.</li>
-<li> <strong>Assisting to create new workflows</strong>: the system could assist users in creating new workflows that are valid according to semantic constraints known about analytic tools and methods. The Wings workflow editor only allows dataflow links that are consistent with the definitions of the workflow components.<br />
-<a href="/sandbox/wpshorttutorial.html#Creating_Valid_Workflow_Templates">See how this is done and try it out!</a>.</li>
-</ol>
-<p>We continue to investigate and improve all those aspects of assistance provided by WINGS.</p>
+    <h3>Description</h3>
+<p>WINGS (Workflow INstance Generation and Specialization) is a semantic workflow system. The WINGS Portal is provided as a WAR file (Web Application ARchive) and runs in a Tomcat Server. It is backed by a Jena TDB Triple store as the Knowledge Base, and the PELLET Reasoner to do reasoning over it. We also use basic Jena Rules to do component-level reasoning. </p>
+<p>The function of the WINGS Portal is to interact with users to provide assistance in creating workflows. It runs on a Web browser, so that no code needs to be installed or downloaded to interact with the system. It allows users to: 1) upload and describe datasets, 2) upload and describe workflow components, 3) create workflows, 4) set up and execute workflows, 5) examine execution results and their provenance. It has an open modular design and can be easily integrated with other existing workflow frameworks. It is built on open web standards from the World Wide Web Consortium (W3C) such as the Web Ontology Language (OWL), the Resource Description Framework (RDF), and the SPARQL query language for RDF.</p>
+<h3>Download</h3>
+<p>By clicking any of the following links and/or downloading the software they refer to by any other means you agree to comply with the <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License Version 2.0</a><br />
+For instructions on how to install Wings, please follow these <a href="https://raw.githubusercontent.com/IKCAP/wings/master/README">Installation Instructions</a></p>
+<ul>
+<li>
+<h3><a href="../node/17663/release">Download Wings Portal</a></h3>
+</li></ul>
+<p>The Source code is available from github: <a href="https://github.com/IKCAP/wings" title="https://github.com/IKCAP/wings">https://github.com/IKCAP/wings</a></p>
   </div>
 
   <div class="clear-block">
@@ -106,14 +90,14 @@ Wings can represent an abstract workflow containing classes of workflow steps, a
                     <div id="block-search-0" class="clear-block block block-search">
 
 
-  <div class="content"><form action="/research"  accept-charset="UTF-8" method="post" id="search-block-form">
+  <div class="content"><form action="/download-wings-portal"  accept-charset="UTF-8" method="post" id="search-block-form">
 <div><div class="container-inline">
   <div class="form-item" id="edit-search-block-form-1-wrapper">
  <label for="edit-search-block-form-1">Search this site: </label>
  <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
 </div>
 <input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
-<input type="hidden" name="form_build_id" id="form-Y8F2etW9yaI-tz48kyGQlxwbbKZDv1T4tWWHYPK_MNI" value="form-Y8F2etW9yaI-tz48kyGQlxwbbKZDv1T4tWWHYPK_MNI"  />
+<input type="hidden" name="form_build_id" id="form-7yB20owsiJhgxiHSwAXaeDZf8S8A8OpatMn7YMoxkoo" value="form-7yB20owsiJhgxiHSwAXaeDZf8S8A8OpatMn7YMoxkoo"  />
 <input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
 </div>
 
@@ -130,7 +114,7 @@ Wings can represent an abstract workflow containing classes of workflow steps, a
 
   <h2>Latest Releases</h2>
 
-  <div class="content"><div class="view view-LatestReleases view-id-LatestReleases view-display-id-block_1 view-dom-id-70e2f3e0b2a7e073ae160aa36186bdca">
+  <div class="content"><div class="view view-LatestReleases view-id-LatestReleases view-display-id-block_1 view-dom-id-472f5980058ee90ef985f99eb555dc6b">
     
   
   
@@ -162,7 +146,7 @@ Wings can represent an abstract workflow containing classes of workflow steps, a
 
   <h2>Latest News</h2>
 
-  <div class="content"><div class="view view-News view-id-News view-display-id-block_1 view-dom-id-211c6dae6190125961a95914de4f0dab">
+  <div class="content"><div class="view view-News view-id-News view-display-id-block_1 view-dom-id-74a7959f53be1409b61da8a15937e4f1">
     
   
   
@@ -210,7 +194,7 @@ Wings can represent an abstract workflow containing classes of workflow steps, a
 
   <h2>Recent Publications</h2>
 
-  <div class="content"><div class="view view-Publications view-id-Publications view-display-id-block_1 view-dom-id-19770e68dd9ced5a65da2c99cd29072f">
+  <div class="content"><div class="view view-Publications view-id-Publications view-display-id-block_1 view-dom-id-f45fc5367b24b0dbd981ae0412039728">
     
   
   

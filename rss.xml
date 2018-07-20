@@ -1,0 +1,126 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="http://wings-workflows.org">
+<channel>
+<title>WINGS</title>
+<link>http://wings-workflows.org</link>
+<description>
+WINGS is a semantic workflow system that assists scientists with the design of computational experiments. A unique feature of WINGS is that its workflow representations incorporate semantic constraints about datasets and workflow components, and are used to create and validate workflows and to generate metadata for new data products. WINGS submits workflows to execution frameworks such as Pegasus and OODT to run workflows at large scale in distributed resources. [more] Research Readings People Featured Workflows Demo DOWNLOAD !
+</description>
+<language>en</language>
+<item>
+<title>Towards data narratives for WINGS workflows</title>
+<link>http://wings-workflows.org/node/17689</link>
+<description>
+<p>Published papers often provide insufficient information about the data, protocols, software, and overall method used to obtain the new results in computational experiments. A major challenge in reproducibility is the lack of appropriate support for authors to capture exactly how experiments were performed. Once the work is finished, authors write an account in their articles by retrospective reconstruction of the work that was actually done, relying on their memory and notes kept along the way. However, we should have automated tools that ensure that the descriptions that are written about computational experiments are in fact accurate and provide enough detail for transparency and reproducibility.</p> <p>In our <a href="http://www.wings-workflows.org/node/17682">previous work</a> we added to WINGS the functionality to capture the full provenance and specification of scientific workflows. Now we have used that information to generate <strong>data narratives</strong> of results, i.e., textual explanations that describe them at different levels of granularity.</p> <p><a href="http://wings-workflows.org/node/17689" target="_blank">read more</a></p>
+</description>
+<comments>http://wings-workflows.org/node/17689#comments</comments>
+<pubDate>Mon, 10 Apr 2017 00:08:29 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17689 at http://wings-workflows.org</guid>
+</item>
+<item>
+<title>WINGS available as a Docker image</title>
+<link>http://wings-workflows.org/node/17688</link>
+<description>
+<p>Docker is a virtualization software that helps replicating the environment and dependencies of any software tool. Thanks to Docker, we can execute a given software independently of the computing environment we used to set it up.<br /> In WINGS, we use Docker to facilitate running components without having to install them in our servers previously. In addition, we have adapted WINGS itself to run as a Docker image as well. You can find more details on how to use WINGS as a Docker container in the following <a href="https://dgarijo.github.io/Materials/Tutorials/wings-docker/">online tutorial</a>.</p>
+</description>
+<comments>http://wings-workflows.org/node/17688#comments</comments>
+<pubDate>Mon, 10 Apr 2017 00:03:13 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17688 at http://wings-workflows.org</guid>
+</item>
+<item>
+<title>Cluster computing with Wings</title>
+<link>http://wings-workflows.org/node/17684</link>
+<description>
+<p>Wings can now (again) work with <a href="http://pegasus.isi.edu">Pegasus</a> and <a />Condor</a>.</p> <p>You can find instructions on how to compile WINGS with condor support here:<br /> <a href="https://github.com/IKCAP/wings/tree/master/engines/pegasus">Instructions on compiling WINGS with pegasus support</a></p>
+</description>
+<comments>http://wings-workflows.org/node/17684#comments</comments>
+<pubDate>Sun, 08 May 2016 14:07:54 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17684 at http://wings-workflows.org</guid>
+</item>
+<item>
+<title>Wings is now integrated in the Disk portal</title>
+<link>http://wings-workflows.org/node/17683</link>
+<description>
+<p>The <a href="http://disk-project.org/">DISK project</a> (automated DIscovery of Scientific Knowledge) aims to develop a novel approach to automate the hypothesize-test-evaluate discovery cycle with an intelligent system that a scientist can task with lines of inquiry to test hypotheses of interest. DISK extends the existing WINGS intelligent workflow system for scientific data analysis, applying it to multi-omics.<br /> DISK has four major research objectives:</p> <p>1) Representing hypotheses and associated evidence and confidence values;</p> <p><a href="http://wings-workflows.org/node/17683" target="_blank">read more</a></p>
+</description>
+<comments>http://wings-workflows.org/node/17683#comments</comments>
+<pubDate>Thu, 31 Mar 2016 17:34:10 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17683 at http://wings-workflows.org</guid>
+</item>
+<item>
+<title>
+A new release of the Wings provenance export is online!
+</title>
+<link>http://wings-workflows.org/node/17682</link>
+<description>
+<p>On previous releases, Wings introduced an export to OPMW that allowed to represent scientific workflows and their provenance as Linked Data. After the latest releases of Wings, the mapper was adapted to the newer version of the workflow system. Now workflow executions are stored in a local execution library, which makes it easy to access them independently. In addition, each execution is associated with its original template, its workflow instance and expanded template:</p> <p><img src="http://wings-workflows.org/sites/default/files/overview.png" height="250" /></p> <p><a href="http://wings-workflows.org/node/17682" target="_blank">read more</a></p>
+</description>
+<comments>http://wings-workflows.org/node/17682#comments</comments>
+<pubDate>Thu, 31 Mar 2016 17:30:37 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17682 at http://wings-workflows.org</guid>
+</item>
+<item>
+<title>
+New Version of Wings Released (4.0 Development Version)
+</title>
+<link>http://wings-workflows.org/node/17665</link>
+<description>
+<p>More details can be found at <a href="http://www.wings-workflows.org/node/17664" title="http://www.wings-workflows.org/node/17664">http://www.wings-workflows.org/node/17664</a></p>
+</description>
+<comments>http://wings-workflows.org/node/17665#comments</comments>
+<pubDate>Wed, 10 Sep 2014 23:30:28 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17665 at http://wings-workflows.org</guid>
+</item>
+<item>
+<title>Workflow Ecosystems and Wings</title>
+<link>http://wings-workflows.org/node/17672</link>
+<description>
+<p>Wings is now part of the WEST workflow ecosystem, which is a collection of workflow tools that interoperate to visualize, analyze, design, execute and explore scientific workflows.</p> <p><a href="http://wings-workflows.org/node/17672" target="_blank">read more</a></p>
+</description>
+<comments>http://wings-workflows.org/node/17672#comments</comments>
+<pubDate>Tue, 01 Jul 2014 22:47:27 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17672 at http://wings-workflows.org</guid>
+</item>
+<item>
+<title>
+Wings is part of DARPA open source software projects for Big Data
+</title>
+<link>http://wings-workflows.org/node/17673</link>
+<description>
+<p><a href="http://www.wings-workflows.org/">Wings semantic workflow system</a> is part of the original collection of <a href="http://www.darpa.mil/OpenCatalog/">DARPA open source software projects for big data</a>.</p> <p><a href="http://wings-workflows.org/node/17673" target="_blank">read more</a></p>
+</description>
+<comments>http://wings-workflows.org/node/17673#comments</comments>
+<pubDate>Thu, 20 Feb 2014 07:22:01 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17673 at http://wings-workflows.org</guid>
+</item>
+<item>
+<title>New version of Wings Released (Source Code)</title>
+<link>http://wings-workflows.org/node/17653</link>
+<description>
+<p>Source code can be found at:<br /> <a href="https://github.com/IKCAP/wings" title="https://github.com/IKCAP/wings">https://github.com/IKCAP/wings</a></p> <p><a href="http://wings-workflows.org/node/17653" target="_blank">read more</a></p>
+</description>
+<comments>http://wings-workflows.org/node/17653#comments</comments>
+<pubDate>Fri, 04 Oct 2013 06:25:16 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17653 at http://wings-workflows.org</guid>
+</item>
+<item>
+<title>Semantic Workflows for Cancer Clinical Omics</title>
+<link>http://wings-workflows.org/node/17638</link>
+<description>
+<p>In collaboration with the <a href="http://www.ohsu.edu/xd/health/services/cancer/about-us/">Knight Cancer Institute at the Oregon Health and Science University</a>, we are using Wings workflows to annotate patient sequence variants obtained through clinical DNA sequencing.</p> <p><a href="http://wings-workflows.org/node/17638" target="_blank">read more</a></p>
+</description>
+<comments>http://wings-workflows.org/node/17638#comments</comments>
+<pubDate>Mon, 24 Jun 2013 22:50:46 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<guid isPermaLink="false">17638 at http://wings-workflows.org</guid>
+</item>
+</channel>
+</rss>

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="sites/default/files/garland_favicon.png" type="image/x-icon" />
-    <title>Research | WINGS</title>
+    <title>People | WINGS</title>
     <link type="text/css" rel="stylesheet" media="all" href="modules/node/node.css?I" />
 <link type="text/css" rel="stylesheet" media="all" href="modules/system/defaults.css?I" />
 <link type="text/css" rel="stylesheet" media="all" href="modules/system/system.css?I" />
@@ -25,7 +25,7 @@
 <script type="text/javascript" src="modules/views/js/ajax_view.js?I"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/views/ajax", "/views/ajax", "/views/ajax" ], "ajaxViews": { "views_dom_id:70e2f3e0b2a7e073ae160aa36186bdca": { "view_name": "LatestReleases", "view_display_id": "block_1", "view_args": "", "view_path": "node/2", "view_base_path": null, "view_dom_id": "70e2f3e0b2a7e073ae160aa36186bdca", "pager_element": 0 }, "views_dom_id:211c6dae6190125961a95914de4f0dab": { "view_name": "News", "view_display_id": "block_1", "view_args": "", "view_path": "node/2", "view_base_path": null, "view_dom_id": "211c6dae6190125961a95914de4f0dab", "pager_element": 0 }, "views_dom_id:19770e68dd9ced5a65da2c99cd29072f": { "view_name": "Publications", "view_display_id": "block_1", "view_args": "", "view_path": "node/2", "view_base_path": null, "view_dom_id": "19770e68dd9ced5a65da2c99cd29072f", "pager_element": 0 } } } });
+jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/views/ajax", "/views/ajax", "/views/ajax" ], "ajaxViews": { "views_dom_id:4bc06f66b9a158a4af90ea08c97e9208": { "view_name": "LatestReleases", "view_display_id": "block_1", "view_args": "", "view_path": "node/35", "view_base_path": null, "view_dom_id": "4bc06f66b9a158a4af90ea08c97e9208", "pager_element": 0 }, "views_dom_id:80254ce212885e170ca17a8d52f8a221": { "view_name": "News", "view_display_id": "block_1", "view_args": "", "view_path": "node/35", "view_base_path": null, "view_dom_id": "80254ce212885e170ca17a8d52f8a221", "pager_element": 0 }, "views_dom_id:e7a8dd792c48e84dd07a273fbc0c8c23": { "view_name": "Publications", "view_display_id": "block_1", "view_args": "", "view_path": "node/35", "view_base_path": null, "view_dom_id": "e7a8dd792c48e84dd07a273fbc0c8c23", "pager_element": 0 } } } });
 //--><!]]>
 </script>
     <!--[if lt IE 7]>
@@ -41,12 +41,11 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/vi
 
       <div id="header">
         <div id="logo-floater">
-        <h1><a href="index.html" title=""><img src="sites/default/files/garland_logo.png" alt="" id="logo" /></a></h1>        </div>
-
+        <h1><a href="/" title=""><img src="sites/default/files/garland_logo.png" alt="" id="logo" /></a></h1>        </div>
 
                   <ul class="links primary-links"><li class="menu-400 first"><a href="index.html" title="">Home</a></li>
 <li class="menu-284"><a href="about.html" title="About the Wings Project">About</a></li>
-<li class="menu-220 active-trail active"><a href="research.html" title="Research details" class="active">Research</a></li>
+<li class="menu-220"><a href="research.html" title="Research details">Research</a></li>
 <li class="menu-219"><a href="publications.html" title="Wings related publications">Publications</a></li>
 <li class="menu-227"><a href="download-wings-portal.html" title="Download Wings">Download</a></li>
 <li class="menu-477"><a href="tutorial.html" title="Wings Workflow System Tutorial">Tutorial</a></li>
@@ -56,39 +55,102 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/vi
 
       
       <div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
-          <div class="breadcrumb"><a href="index.html">Home</a></div>                              <h2>Research</h2>                                                  <div class="clear-block">
-            <div id="node-2" class="node">
+          <div class="breadcrumb"><a href="index.html">Home</a></div>                              <h2>People</h2>                                                  <div class="clear-block">
+            <div id="node-38" class="node">
 
 
 
   
   <div class="content clear-block">
-    <p>At the core of the WINGS architecture are workflow generation and validation algorithms that propagate semantic constraints about datasets and components throughout the structure of the workflow.  These algorithms are used in a variety of ways to assist users in creating valid workflows, and can automate important aspects of workflow generation:</p>
-<ol>
-<li> <strong>Reuse of workflows</strong>: rather than having to create a new workflow from scratch, a user would be presented with workflows already created by others and that fit their analysis goals and that contain semantic constraints that determine what datasets are appropriate for a given workflow. To accomplish this, Wings offers a library of pre-defined semantic workflows that you can reuse.<br />
-<a href="/sandbox/wpshorttutorial.html#Running_a_Workflow:_The_Basics">See how this is done and try it out!</a>.</li>
-<li> <strong>Assisting users in using methods correctly</strong>: a researcher may have detailed knowledge of the general principles involved in an analysis, but may not be familiar with the detailed requirements of the analytic software to be used. Wings offers assistance in setting up method parameter values that are appropriate for the properties of your datasets.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Help_Set_Up_Workflow_Parameters">See how this is done and try it out!</a>.</li>
-<li> <strong>Finding relevant data</strong>: a researcher that has data they have collected in their lab and is being processed by a selected workflow would wonder if there are other data collected by others that she could use to strengthen her claims. Wings makes suggestions of datasets that are available and are consistent with the user's current workflow.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Help_You_Find_Relevant_Datasets">See how this is done and try it out!</a>.</li>
-<li> <strong>Managing parallelism for large collections of data</strong>: researchers that use large collections of data could benefit from workflow parallelization and concurrency mechanisms that the system would automatically setup by reasoning about the semantics of the workflows and their treatment of data. Wings can represent data collections and generate automatically individual parallel computations.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Manage_the_Parallel_Processing_of_Collections_of_Data">See how this is done and try it out!</a>.</li>
-<li> <strong>Reproducing published results</strong>: rather than having to read the published articles and set up the software, a researcher could retrieve the workflow used in that article and easily re-execute it and/or examine its setup. To support this, Wings allows the reuse of workflow templates created by others while<br />
-ensuring that the workflows that you set up are valid.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Validate_Your_Workflow">See how this is done and try it out!</a>.</li>
-<li> <strong>Incorporating the latest analytic tools</strong>: an expert researcher would like their workflow to always include the latest algorithms that are published and that perform a certain function in their analysis. To accomplish this, Wings can represent classes of components as workflow steps and automatically specialize them to executable components.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Specialize_an_Abstract_Workflow">See how this is done and try it out!</a>.</li>
-<li> <strong>Automatic triggering of analyses when new relevant data becomes available</strong>: a researcher can set up a type of analysis to be automatically run and updated by the system and send her notifications when completed.<br />
-Wings can represent an abstract workflow containing classes of workflow steps, and customize it automatically to the new datasets.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Automatically_Select_Workflow_Components">See how this is done and try it out!</a>.</li>
-<li> <strong>Automatic generation of metadata</strong>: the workflow system can automatically generate metadata for new data products resulting from workflow execution. Wings uses the metadata properties of your datasets to figure out what will be the metadata of the results of workflow execution<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Automatically_Generate_Metadata">See how this is done and try it out!</a>.</li>
-<li> <strong>Assisting to create a variant of an existing workflow</strong>: a researcher wants to make small changes to an existing workflow, the system can assist them to make sure the resulting workflow is valid. Wings can automatically elaborate templates by propagating semantic constraints and alerting users when the modifications they make are not valid.<br />
-<a href="/sandbox/wpshorttutorial.html#Creating_Valid_Workflow_Templates">See how this is done and try it out!</a>.</li>
-<li> <strong>Assisting to create new workflows</strong>: the system could assist users in creating new workflows that are valid according to semantic constraints known about analytic tools and methods. The Wings workflow editor only allows dataflow links that are consistent with the definitions of the workflow components.<br />
-<a href="/sandbox/wpshorttutorial.html#Creating_Valid_Workflow_Templates">See how this is done and try it out!</a>.</li>
-</ol>
-<p>We continue to investigate and improve all those aspects of assistance provided by WINGS.</p>
+    <h3>Group Members:</h3>
+<dd class="people"><a href="http://www.isi.edu/~gil">Yolanda Gil</a><br />
+<a href="http://www.isi.edu/~gil"><img width="120" src="http://www.isi.edu/ikcap/images/gil.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://www.isi.edu/~varunr">Varun Ratnakar</a><br />
+<a href="http://www.isi.edu/~varunr"><img width="120" src="http://www.isi.edu/ikcap/images/varunr.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://www.isi.edu/~jihie">Jihie Kim</a><br />
+<a href="http://www.isi.edu/~jihie"><img width="120" src="http://www.isi.edu/ikcap/images/jihie.jpg" /></a><br />
+</dd>
+<dd class="people">Matheus Hauder<br />
+<img width="120" src="http://www.isi.edu/ikcap/images/matheus.jpg" /><br />
+</dd>
+<dd class="people">Daniel Garijo<br />
+<img width="120" src="http://mayor2.dia.fi.upm.es/oeg-upm/images/stories/people/dgarijo.png" /><br />
+</dd>
+<dd class="people"><a href="http://research.sethi.org/ricky/">Ricky Sethi</a><br />
+<a href="http://research.sethi.org/ricky/"><img width="120" src="http://research.sethi.org/images/ricky_j_sethi-small.jpg" /></a><br />
+</dd>
+<dd class="people">Hyunjoon Jo<br />
+<img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /><br />
+</dd>
+<h3>&nbsp;</h3>
+<h3>Current Collaborators:</h3>
+<dd class="people"><a href="http://sunset.usc.edu/~mattmann/">Chris Mattman</a><br />
+<a href="http://sunset.usc.edu/~mattmann/"><img width="120" src="http://sunset.usc.edu/~mattmann/images/chris-2012.jpeg" /></a><br />
+</dd>
+<dd class="people"><a href="http://www.isi.edu/~deelman">Ewa Deelman</a><br />
+<a href="http://www.isi.edu/~deelman"><img width="120" src="http://www.isi.edu/ikcap/images/deelman.jpg" /></a><br />
+</dd>
+<dd class="people">Gaurang Mehta<br />
+<img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /><br />
+</dd>
+<dd class="people"><a href="http://www.isi.edu/~vahi">Karan Vahi</a><br />
+<a href="http://www.isi.edu/~vahi"><img width="120" src="http://ccgrid2008.ens-lyon.fr/tutorials/vahi.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="https://eng.ucmerced.edu/harmongroup/harmon">Tom Harmon</a><br />
+<a href="https://eng.ucmerced.edu/harmongroup/harmon"><img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /></a><br />
+</dd>
+<dd class="people">Sandra Villamizar<br />
+<img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /><br />
+</dd>
+<dd class="people"><a href="http://cci.emory.edu/cms/people/pages/saltz_joel.html">Joel Saltz</a><br />
+<a href="http://cci.emory.edu/cms/people/pages/saltz_joel.html"><img width="120" src="http://cci.emory.edu/cms/people/pages/images/JoelSaltzPicture.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://cci.emory.edu/cms/people/pages/kurc_tahsin.html">Tahsin Kurc</a><br />
+<a href="http://cci.emory.edu/cms/people/pages/kurc_tahsin.html"><img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /></a><br />
+</dd>
+<dd class="people">Vijay S Kumar<br />
+<img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /><br />
+</dd>
+<dd class="people"><a href="http://www.yale.edu/state/Christopher_Mason.html">Christopher Mason</a><br />
+<a href="http://www.yale.edu/state/Christopher_Mason.html"><img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://www.uni-trier.de/index.php?id=12983">Ralph Bergmann</a><br />
+<a href="http://www.uni-trier.de/index.php?id=12983"><img width="120" src="http://www.uni-trier.de/uploads/pics/bergmann.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://pharmacology.ucsd.edu/faculty/bourne.shtml">Philip Bourne</a><br />
+<a href="http://pharmacology.ucsd.edu/faculty/bourne.shtml"><img width="120" src="http://pharmacology.ucsd.edu/faculty/New%20Picture.png" /></a><br />
+</dd>
+<dd class="people">Jun Ma<br />
+<img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /><br />
+</dd>
+<dd class="people">Andrew Philpot<br />
+<img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /><br />
+</dd>
+<h3>&nbsp;</h3>
+<h3>Alumni and Former Members:</h3>
+<dd class="people"><a href="http://www.isi.edu/~fritz">Christian Fritz</a><br />
+<a href="http://www.isi.edu/~fritz"><img width="120" src="http://www.isi.edu/ikcap/images/fritz.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://www.isi.edu/~moody">Joshua Moody</a><br />
+<a href="http://www.isi.edu/~moody"><img width="120" src="http://www.isi.edu/ikcap/images/moody.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://www.few.vu.nl/~pgroth/Site/Welcome.html">Paul Groth</a><br />
+<a href="http://www.few.vu.nl/~pgroth/Site/Welcome.html"><img width="120" src="http://www.isi.edu/ikcap/images/pgroth.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://gaia.fdi.ucm.es/people/pedro/">Pedro Gonzalez Calero</a><br />
+<a href="http://gaia.fdi.ucm.es/people/pedro/"><img width="120" src="http://www.isi.edu/ikcap/images/pedro.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Puga:Gonzalo_Fl=oacute=rez.html">Gonzalo Florez Puga</a><br />
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Puga:Gonzalo_Fl=oacute=rez.html"><img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /></a><br />
+</dd>
+<dd class="people"><a href="http://www.comp.hkbu.edu.hk/~william/">William Cheung</a><br />
+<a href="http://www.comp.hkbu.edu.hk/~william/"><img width="120" src="http://www.isi.edu/ikcap/images/william.jpg" /></a><br />
+</dd>
+<dd class="people">Larry Kite<br />
+<img width="120" src="http://www.isi.edu/ikcap/images/default-person.jpg" /><br />
+</dd>
   </div>
 
   <div class="clear-block">
@@ -106,14 +168,14 @@ Wings can represent an abstract workflow containing classes of workflow steps, a
                     <div id="block-search-0" class="clear-block block block-search">
 
 
-  <div class="content"><form action="/research"  accept-charset="UTF-8" method="post" id="search-block-form">
+  <div class="content"><form action="/people"  accept-charset="UTF-8" method="post" id="search-block-form">
 <div><div class="container-inline">
   <div class="form-item" id="edit-search-block-form-1-wrapper">
  <label for="edit-search-block-form-1">Search this site: </label>
  <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
 </div>
 <input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
-<input type="hidden" name="form_build_id" id="form-Y8F2etW9yaI-tz48kyGQlxwbbKZDv1T4tWWHYPK_MNI" value="form-Y8F2etW9yaI-tz48kyGQlxwbbKZDv1T4tWWHYPK_MNI"  />
+<input type="hidden" name="form_build_id" id="form-PYNk_YbTS2XgQ2FAVik65ovgjoXe4d3GDRugsjxiM4w" value="form-PYNk_YbTS2XgQ2FAVik65ovgjoXe4d3GDRugsjxiM4w"  />
 <input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
 </div>
 
@@ -123,14 +185,14 @@ Wings can represent an abstract workflow containing classes of workflow steps, a
 <div id="block-user-1" class="clear-block block block-user">
 
 
-  <div class="content"><ul class="menu"><li class="collapsed first last"><a href="publications.html">Publications</a></li>
+  <div class="content"><ul class="menu"><li class="collapsed first last"><a href="/publications">Publications</a></li>
 </ul></div>
 </div>
 <div id="block-views-LatestReleases-block_1" class="clear-block block block-views">
 
   <h2>Latest Releases</h2>
 
-  <div class="content"><div class="view view-LatestReleases view-id-LatestReleases view-display-id-block_1 view-dom-id-70e2f3e0b2a7e073ae160aa36186bdca">
+  <div class="content"><div class="view view-LatestReleases view-id-LatestReleases view-display-id-block_1 view-dom-id-28b0629030731a8b0a11f8bc6a107b94">
     
   
   
@@ -162,7 +224,7 @@ Wings can represent an abstract workflow containing classes of workflow steps, a
 
   <h2>Latest News</h2>
 
-  <div class="content"><div class="view view-News view-id-News view-display-id-block_1 view-dom-id-211c6dae6190125961a95914de4f0dab">
+  <div class="content"><div class="view view-News view-id-News view-display-id-block_1 view-dom-id-9dac8842baf36706138e80b6296cbfdc">
     
   
   
@@ -210,7 +272,7 @@ Wings can represent an abstract workflow containing classes of workflow steps, a
 
   <h2>Recent Publications</h2>
 
-  <div class="content"><div class="view view-Publications view-id-Publications view-display-id-block_1 view-dom-id-19770e68dd9ced5a65da2c99cd29072f">
+  <div class="content"><div class="view view-Publications view-id-Publications view-display-id-block_1 view-dom-id-4614a110f02da24b384430d53178921c">
     
   
   
