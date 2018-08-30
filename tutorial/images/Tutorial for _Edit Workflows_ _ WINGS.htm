@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/sites/default/files/garland_favicon.png" type="image/x-icon" />
+    <title>Tutorial for &quot;Edit Workflows&quot; | WINGS</title>
+    <link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/forum/forum.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/project/project.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/project/release/project_release.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/biblio/biblio.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/views/css/views.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/themes/garland/style.css?I" />
+<link type="text/css" rel="stylesheet" media="all" href="/themes/garland/mystyle.css?I" />
+<link type="text/css" rel="stylesheet" media="print" href="/themes/garland/print.css?I" />
+    <script type="text/javascript" src="/misc/jquery.js?I"></script>
+<script type="text/javascript" src="/misc/drupal.js?I"></script>
+<script type="text/javascript" src="/modules/views/js/base.js?I"></script>
+<script type="text/javascript" src="/modules/views/js/ajax_view.js?I"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "views": { "ajax_path": [ "/views/ajax", "/views/ajax", "/views/ajax" ], "ajaxViews": { "views_dom_id:fdddc7705aa4daabd0ec2ac40ab7d9c2": { "view_name": "LatestReleases", "view_display_id": "block_1", "view_args": "", "view_path": "node/51", "view_base_path": null, "view_dom_id": "fdddc7705aa4daabd0ec2ac40ab7d9c2", "pager_element": 0 }, "views_dom_id:a46a1bc5bd5ec8c2d085051e51405eba": { "view_name": "News", "view_display_id": "block_1", "view_args": "", "view_path": "node/51", "view_base_path": null, "view_dom_id": "a46a1bc5bd5ec8c2d085051e51405eba", "pager_element": 0 }, "views_dom_id:0227c92f4f78fc249640635fa40771b7": { "view_name": "Publications", "view_display_id": "block_1", "view_args": "", "view_path": "node/51", "view_base_path": null, "view_dom_id": "0227c92f4f78fc249640635fa40771b7", "pager_element": 0 } } } });
+//--><!]]>
+</script>
+    <!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/themes/garland/fix-ie.css" />    <![endif]-->
+  </head>
+  <body class="sidebar-right">
+
+<!-- Layout -->
+  <div id="header-region" class="clear-block"></div>
+
+    <div id="wrapper">
+    <div id="container" class="clear-block">
+
+      <div id="header">
+        <div id="logo-floater">
+        <h1><a href="/" title=""><img src="/sites/default/files/garland_logo.png" alt="" id="logo" /></a></h1>        </div>
+
+                  <ul class="links primary-links"><li class="menu-400 first"><a href="/" title="">Home</a></li>
+<li class="menu-284"><a href="/about" title="About the Wings Project">About</a></li>
+<li class="menu-220"><a href="/research" title="Research details">Research</a></li>
+<li class="menu-219"><a href="/publications" title="Wings related publications">Publications</a></li>
+<li class="menu-227"><a href="/download-wings-portal" title="Download Wings">Download</a></li>
+<li class="menu-477"><a href="/tutorial" title="Wings Workflow System Tutorial">Tutorial</a></li>
+<li class="menu-589 last"><a href="/cite" title="">Cite</a></li>
+</ul>                                  
+      </div> <!-- /header -->
+
+      
+      <div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
+          <div class="breadcrumb"><a href="/">Home</a></div>                              <h2>Tutorial for &quot;Edit Workflows&quot;</h2>                                                  <div class="clear-block">
+            <div id="node-51" class="node">
+
+
+
+  
+  <div class="content clear-block">
+    <style> 
+ol.steps li { padding-bottom:30px; }
+div.stepdesc { color: brown; padding-bottom:10px;}
+ol.steps div li { padding-bottom:2px; }
+</style><h3>Quick Links</h3>
+<ul class="quick">
+<li><a href="../tutorial">Back to Main Tutorial</a>
+</li><li><a href="#create_template">Create New Template</a>
+</li><li><a href="#view_available_components">View Available Components</a>
+</li><li>
+Graph modification
+<ul>
+<li><a href="#add_node">Add Component Node</a>
+</li><li><a href="#add_link">Add Link</a>
+</li><li><a href="#edit_variable">Edit Variable Name</a>
+</li><li><a href="#edit_variable_collection">Set Input Variable to be a Collection</a>
+</li><li><a href="#edit_component">Edit Component Information</a>
+</li><li><a href="#edit_component_collection">Set Component to be a Collection</a>
+</li><li><a href="#multiple_selection">Select Multiple Items</a>
+</li></ul>
+</li>
+<li><a href="#variable_colors">Variable Color Coding</a>
+</li><li><a href="#component_colors">Component Color Coding</a>
+</li><li>
+Graph utility Functions
+<ul>
+<li><a href="#dot_layout">Layout Graph</a>
+</li><li><a href="#zoom_functions">Zoom Functions</a>
+</li><li><a href="#grab_image">Take Snapshot of Graph</a>
+</li></ul>
+</li>
+<li>
+Workflow Constraints
+<ul>
+<li><a href="#variable_constraints">Constraints Table</a>
+</li><li><a href="#elaborate_template">Elaborate Template</a>
+</li><li><a href="#add_constraint">Add new Constraint</a>
+</li><li><a href="#edit_constraint">Edit existing Constraint</a>
+</li><li><a href="#set_parameter_values">Set default value for a Parameter Variable</a>
+</li><li><a href="#delete_constraints">Delete Constraint</a>
+</li></ul>
+</li>
+<li><a href="#add_documentation">Edit Documentation</a>
+</li><li><a href="#saving">Save Template</a>
+</li><li><a href="#reusing_parts">Reusing Parts of Old Templates in New Templates</a>
+</li></ul>
+<h2>Edit Workflows</h2>
+<ol class="steps">
+<li>
+<div class='stepdesc'>
+Open "Edit Workflows" page from the Portal Navigation Menu.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit1.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+This is the "Edit Workflows" interface.<br />
+In here, we can create Workflow Templates
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit2.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="create_template"></a> This is the "New Template" button. Click on it to create a new workflow template.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit3.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+A window will popup asking for the name of the new Workflow Template.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit4.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+The new template ("MultiCountWords" in this case) is shown under Templates on the left side of the interface, and the template editor is opened automatically as well on the right in a new Tab.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit5.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="view_available_components"></a> The "Components" Tab on the left shows the components available
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit6.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+The "Components" can be shown in 3 views. The default "Tree" view, which shows the hierarchy of components.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit7.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+The "Inputs" view, which shows components grouped by inputs.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit8.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+The "Outputs" view, which shows components grouped by outputs.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit9.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+Hovering on a component shows it's Inputs and Outputs.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit10.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="add_node"></a> To Add a component to the Workflow Template, Drag the component from the left to the checked area on the right.<br />
+The icon of the dragging component shows if it is ok to drop or not. Here it shows that it NOT OK.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit11.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+As we approach the checked area, the icon indicates that it is OK to drop.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit12.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="component_colors"></a> After dropping, the component appears in the workflow template. The text is red colored as it's input and output ports (the small rectangular boxes) haven't been connected to variables yet.<br />
+The color of the box itself is "light-orange" if this is a concrete component, and "gray" if this is an abstract component.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit13.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+You can select the component and move it around.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit14.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="add_link"></a> Hovering over a port (the small rectangular boxes) shows information about it. These ports correspond to the component identifiers that were created in the "Manage Components" interface.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit15.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+A Link can be dragged out from the port. While dragging, the "shadow variable" appears like below.<br />
+Variables are displayed as ovals.<br />
+We can drag this link out to
+<ul>
+<li>empty space (which will create a new variable),</li>
+<li>another variable port (which will connect that variable to this port),</li>
+<li>another component port (which will link both components together via a new variable)</li>
+</ul>
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit17.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="variable_colors"></a> Data Variables that are Inputs to the Workflow are shown in Blue.<br />
+Parameter Variables are shown in Green.<br />
+All other variables are shown in Navy Blue.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit16.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="dot_layout"></a> Click on "Layout" to connect to Graphviz (if installed) and layout the workflow template. This is useful especially if the graph is becoming quite big and unmanageable.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit18.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+Here the system is trying to connect to "dot". If this doesn't work, make sure that the path to "dot" is correctly specified in portal.properties
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit19.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+After laying out
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit20.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="zoom_functions"></a> There are other buttons above the Graph like "Zoom" functions.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit21.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="grab_image"></a> The "Grab Image" function creates an image out of the canvas that can be saved on desktop.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit22.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="elaborate_template"></a> This is the "Elaborate Template" button found above the graph, on top of the "Constraints Table".<br />
+Click it to connect to the Wings Semantic Reasoner in order to reason about, validate, and add more annotations to the Workflow.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit23.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+Here the system is getting an elaborated workflow from the Wings Semantic Reasoner.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit24.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+A popup window appears after Elaboration.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit25.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="variable_constraints"></a> Constraints for this workflow template are shown in the "Constraints Table" after elaboration.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit26.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+If we select a variable, it will show constraints only for that variable. Here the "sampleInputFile1" variable is selected.<br />
+The Constraints Table now only shows Constraints for sampleInputFile1 variable.<br />
+Also, below the Graph is an editable form that allows changing properties of this variable.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit27.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="edit_variable"></a> The Variable name can be changed once the Variable is selected in the graph.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit28.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="edit_variable_collection"></a> For Inputs to the workflow, we can also indicate whether the Variable should be a collection or not.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit29.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+Collection variables appear as a stack of ovals.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit30.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="edit_component"></a> <a name="edit_component_collection"></a>Similarly, we can also change properties of the Component by selecting it.<br />
+By default "Use all Input Data in same workflow" is set to true.  That means if the coming input variable is a collection (or of a higher dimensionality that what is expected), then we should create multiple parallel instances of the Component to handle the input data.<br />
+Collection components appear as a stack of rectangles.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit31.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+The "Input Data Combination" tab provides an interface to setup the way input data collections are combined and provided to the components using the data.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit31.1.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+This shows that by default a Cross-Product (XPRODUCT) of all inputs is done. The other combination function is NWISE(i.e. one-to-one match by index). Operations that work on a single port are: Increase Dimension (INCREASEDIM), Reduce Dimension (REDUCEDIM), and SHIFT (i.e. reducing collection size by one and shifting to the left). These single-port operators can be also used as argument to XPRODUCT and NWISE.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit31.2.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+Here we can select the ports on which the combination function occurs.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit31.3.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="multiple_selection"></a> Multiple items in the graph can be selected by Dragging a box around them.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit33.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="delete_items"></a> Selected items can be deleted by pressing the "Delete Selected" button.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit34.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="add_constraint"></a> Click on "Add Constraint" to create a new Constraint.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit35.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="edit_constraint"></a> Constraint items can be edited by clicking on them.<br />
+The Variable item shows a drop-down list of the current workflow template's variables.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit36.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+The "Constraint" item shows a list of all constraints that can be specified. This contains some constraints from the "wflow" namespace, and an "rdf:type" constraint. The rest of the constraints from the "dcdom" namespace are the ones that have been described in the "Manage Data" interface.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit37.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="set_parameter_values"></a> We can set values for Parameter Variables by using the constraint "wflow:hasParameterValue".<br />
+First click on 'Add Contraint' button, and then select the variable as word, constraint as 'wflow:hasParameterValue' and enter the value as shown below
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit38.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="delete_constraints"></a> Constraints can be selected by clicking on the checkbox next to them. All constraints can be selected by clicking on the checkbox on top.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit39.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+Click on "Delete Constraint" to delete all selected constraints.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit40.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="add_documentation"></a> Documentation can be added to describe the template by clicking on the "Documentation" tab.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit41.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+<a name="saving"></a> Click on "Save" to save the current tempate.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit42.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+Click on "Save As" to save the current tempate with another name.
+</div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit43.png' />
+</p></li>
+<li>
+<div class='stepdesc'>
+The "Save As" button can also be used to reuse parts of old templates in new templates. WINGS does not currently allow for copying and pasting parts between workflows, but old parts can still be reused by following these steps:
+<ol>
+<li> Save the old template with the "Save As" button and give the new template a name.</li>
+<li>Go to the new template and delete any components you no longer need.</li>
+<li>Start building from the parts that were kept from the old template.
+</li></ol></div>
+<p><img onload="this.width/=2;this.onload=null;" src='../sites/default/files/Edit43.png' />
+</p></li>
+</ol>
+  </div>
+
+  <div class="clear-block">
+    <div class="meta">
+        </div>
+
+      </div>
+
+</div>
+          </div>
+                    <div id="footer">We are grateful for funding from the National Science Foundation under grants CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants NIH U24 MH068457 and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants HR0011-07-C-0060 and W911NF-15-1-0555, and from the Air Force Research Laboratory under grant FA8750-06-C-0210.</div>
+      </div></div></div></div> <!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
+
+              <div id="sidebar-right" class="sidebar">
+                    <div id="block-search-0" class="clear-block block block-search">
+
+
+  <div class="content"><form action="/tutorial/edit_workflows"  accept-charset="UTF-8" method="post" id="search-block-form">
+<div><div class="container-inline">
+  <div class="form-item" id="edit-search-block-form-1-wrapper">
+ <label for="edit-search-block-form-1">Search this site: </label>
+ <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-wLntljAQzKZe3oDqRIwx5OPOwfcKjeHHtb142DJQL5M" value="form-wLntljAQzKZe3oDqRIwx5OPOwfcKjeHHtb142DJQL5M"  />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</div>
+
+</div></form>
+</div>
+</div>
+<div id="block-user-1" class="clear-block block block-user">
+
+
+  <div class="content"><ul class="menu"><li class="collapsed first last"><a href="/publications">Publications</a></li>
+</ul></div>
+</div>
+<div id="block-views-LatestReleases-block_1" class="clear-block block block-views">
+
+  <h2>Latest Releases</h2>
+
+  <div class="content"><div class="view view-LatestReleases view-id-LatestReleases view-display-id-block_1 view-dom-id-fdddc7705aa4daabd0ec2ac40ab7d9c2">
+    
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-1">
+        <thead>
+      <tr>
+                  <th class="views-field views-field-title">
+                      </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first views-row-last">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17664">Wings Portal <span>4.0-SNAPSHOT</span></a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+</div>
+<div id="block-views-News-block_1" class="clear-block block block-views">
+
+  <h2>Latest News</h2>
+
+  <div class="content"><div class="view view-News view-id-News view-display-id-block_1 view-dom-id-a46a1bc5bd5ec8c2d085051e51405eba">
+    
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-1">
+        <thead>
+      <tr>
+                  <th class="views-field views-field-title">
+                      </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title" >
+            04/10/2017 - 08:08: <a href="/node/17689">Towards data narratives for WINGS workflows</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            04/10/2017 - 08:03: <a href="/node/17688">WINGS available as a Docker image</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            05/08/2016 - 22:07: <a href="/node/17684">Cluster computing with Wings</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            04/01/2016 - 01:34: <a href="/node/17683">Wings  is now integrated in the Disk portal</a>          </td>
+              </tr>
+          <tr class="odd views-row-last">
+                  <td class="views-field views-field-title" >
+            04/01/2016 - 01:30: <a href="/node/17682">A new release of the Wings provenance export is online!</a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+</div>
+<div id="block-views-Publications-block_1" class="clear-block block block-views">
+
+  <h2>Recent Publications</h2>
+
+  <div class="content"><div class="view view-Publications view-id-Publications view-display-id-block_1 view-dom-id-0227c92f4f78fc249640635fa40771b7">
+    
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-1">
+        <thead>
+      <tr>
+                  <th class="views-field views-field-title">
+                      </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17679">Dynamically Generated Metadata and Replanning by Interleaving Workflow Generation and Execution</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17678">Teaching Big Data Analytics Skills with Intelligent Workflow Systems</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17681">Use of Semantic Workflows to Enhance Transparency and Reproducibility in Clinical Omics</a>          </td>
+              </tr>
+          <tr class="even views-row-last">
+                  <td class="views-field views-field-title" >
+            <a href="/node/17680">OntoSoft: Capturing Scientific Software Metadata</a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+</div>
+        </div>
+      
+    </div> <!-- /container -->
+  </div>
+<!-- /layout -->
+
+    </body>
+</html>
