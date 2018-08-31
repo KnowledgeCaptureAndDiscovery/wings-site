@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-<title>WINGS | Research</title>
+<title>Research</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/logoMini.png">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -36,10 +37,10 @@ body, html {
     <div class="w3-right w3-hide-small">
       <a href="home.html" class="w3-bar-item w3-button">Home</a>
       <a href="about.html" class="w3-bar-item w3-button"> About</a>
-      <a href="research.html" class="w3-bar-item w3-button"> Research</a>
+      <a href="research.html" class="w3-bar-item w3-button"><strong>Research</strong></a>
       <a href="publications.html" class="w3-bar-item w3-button"> Publications</a>
       <a href="download.html" class="w3-bar-item w3-button"> Download</a>
-    <a href="tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
+    <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
     <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
     
     </div>
@@ -56,10 +57,10 @@ body, html {
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-large w3-padding-16">Close ×</a>
   <a href="home.html" class="w3-bar-item w3-button">Home</a>
   <a href="about.html" class="w3-bar-item w3-button"> About</a>
-  <a href="research.html" class="w3-bar-item w3-button"> Research</a>
+  <a href="research.html" class="w3-bar-item w3-button"> <strong>Research</strong></a>
   <a href="publications.html" class="w3-bar-item w3-button"> Publications</a>
   <a href="download.html" class="w3-bar-item w3-button"> Download</a>
-  <a href="tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
+  <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
   <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
 </nav>
 
@@ -68,31 +69,30 @@ body, html {
 <div class="w3-container" style="padding:128px 16px">
   <div class="w3-row-padding w3-white">
     <p class="w3-justify">
-  <h3 class="w3-center">Research</h3>
-  <p class="w3-center w3-large">At the core of the WINGS architecture are workflow generation and validation algorithms that propagate semantic constraints about datasets and components throughout the structure of the workflow.  These algorithms are used in a variety of ways to assist users in creating valid workflows, and can automate important aspects of workflow generation:</p>
+  At the core of the WINGS architecture are workflow generation and validation algorithms that propagate semantic constraints about datasets and components throughout the structure of the workflow.  These algorithms are used in a variety of ways to assist users in creating valid workflows, and can automate important aspects of workflow generation:</p>
 <ol>
 <li> <strong>Reuse of workflows</strong>: rather than having to create a new workflow from scratch, a user would be presented with workflows already created by others and that fit their analysis goals and that contain semantic constraints that determine what datasets are appropriate for a given workflow. To accomplish this, Wings offers a library of pre-defined semantic workflows that you can reuse.<br />
-<a href="/sandbox/wpshorttutorial.html#Running_a_Workflow:_The_Basics">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Running_a_Workflow_The_Basics">See how this is done and try it out!</a>.</li>
 <li> <strong>Assisting users in using methods correctly</strong>: a researcher may have detailed knowledge of the general principles involved in an analysis, but may not be familiar with the detailed requirements of the analytic software to be used. Wings offers assistance in setting up method parameter values that are appropriate for the properties of your datasets.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Help_Set_Up_Workflow_Parameters">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Getting_Wings_to_Help_Set_Up_Workflow_Parameters">See how this is done and try it out!</a>.</li>
 <li> <strong>Finding relevant data</strong>: a researcher that has data they have collected in their lab and is being processed by a selected workflow would wonder if there are other data collected by others that she could use to strengthen her claims. Wings makes suggestions of datasets that are available and are consistent with the user's current workflow.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Help_You_Find_Relevant_Datasets">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Getting_Wings_to_Help_You_Find_Relevant_Datasets">See how this is done and try it out!</a>.</li>
 <li> <strong>Managing parallelism for large collections of data</strong>: researchers that use large collections of data could benefit from workflow parallelization and concurrency mechanisms that the system would automatically setup by reasoning about the semantics of the workflows and their treatment of data. Wings can represent data collections and generate automatically individual parallel computations.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Manage_the_Parallel_Processing_of_Collections_of_Data">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Getting_Wings_to_Manage_the_Parallel_Processing_of_Collections_of_Data">See how this is done and try it out!</a>.</li>
 <li> <strong>Reproducing published results</strong>: rather than having to read the published articles and set up the software, a researcher could retrieve the workflow used in that article and easily re-execute it and/or examine its setup. To support this, Wings allows the reuse of workflow templates created by others while<br />
 ensuring that the workflows that you set up are valid.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Validate_Your_Workflow">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Getting_Wings_to_Validate_Your_Workflow">See how this is done and try it out!</a>.</li>
 <li> <strong>Incorporating the latest analytic tools</strong>: an expert researcher would like their workflow to always include the latest algorithms that are published and that perform a certain function in their analysis. To accomplish this, Wings can represent classes of components as workflow steps and automatically specialize them to executable components.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Specialize_an_Abstract_Workflow">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Getting_Wings_to_Specialize_an_Abstract_Workflow">See how this is done and try it out!</a>.</li>
 <li> <strong>Automatic triggering of analyses when new relevant data becomes available</strong>: a researcher can set up a type of analysis to be automatically run and updated by the system and send her notifications when completed.<br />
 Wings can represent an abstract workflow containing classes of workflow steps, and customize it automatically to the new datasets.<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Automatically_Select_Workflow_Components">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Getting_Wings_to_Automatically_Select_Workflow_Components">See how this is done and try it out!</a>.</li>
 <li> <strong>Automatic generation of metadata</strong>: the workflow system can automatically generate metadata for new data products resulting from workflow execution. Wings uses the metadata properties of your datasets to figure out what will be the metadata of the results of workflow execution<br />
-<a href="/sandbox/wpshorttutorial.html#Getting_Wings_to_Automatically_Generate_Metadata">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Getting_Wings_to_Automatically_Generate_Metadata">See how this is done and try it out!</a>.</li>
 <li> <strong>Assisting to create a variant of an existing workflow</strong>: a researcher wants to make small changes to an existing workflow, the system can assist them to make sure the resulting workflow is valid. Wings can automatically elaborate templates by propagating semantic constraints and alerting users when the modifications they make are not valid.<br />
-<a href="/sandbox/wpshorttutorial.html#Creating_Valid_Workflow_Templates">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Edit_Workflows">See how this is done and try it out!</a>.</li>
 <li> <strong>Assisting to create new workflows</strong>: the system could assist users in creating new workflows that are valid according to semantic constraints known about analytic tools and methods. The Wings workflow editor only allows dataflow links that are consistent with the definitions of the workflow components.<br />
-<a href="/sandbox/wpshorttutorial.html#Creating_Valid_Workflow_Templates">See how this is done and try it out!</a>.</li>
+<a href="tutorial/tutorial.html#Edit_Workflows">See how this is done and try it out!</a>.</li>
 </ol>
 </p>
 </div>
@@ -100,11 +100,33 @@ Wings can represent an abstract workflow containing classes of workflow steps, a
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="research.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
- 
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<footer class="w3-center w3-black ">
+    <div class="w3-container">
+      <p class="w3-justify">We are grateful for funding from the National Science Foundation under grants CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants NIH U24 MH068457 and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants HR0011-07-C-0060 and W911NF-15-1-0555, and from the Air Force Research Laboratory under grant FA8750-06-C-0210.</p>
+     
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> <p><a href="home.html" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
+    </div>
+    <!--class="w3-light-grey w3-button" -->
+  
 </footer>
+ 
+<script>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
  
 
 </body>
