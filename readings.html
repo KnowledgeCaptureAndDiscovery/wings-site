@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<title>Readings</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/logoMini.png">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+    background: #edf5fa;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+    
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white2 w3-card" id="myNavbar">
+    <img class="w3-bar-item" src="images/garland_logo.png" alt="WINGS LOGO"/> 
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="home.html" class="w3-bar-item w3-button">Home</a>
+      <a href="about.html" class="w3-bar-item w3-button"> About</a>
+      <a href="research.html" class="w3-bar-item w3-button">Research</a>
+      <a href="publications.html" class="w3-bar-item w3-button"> Publications</a>
+      <a href="download.html" class="w3-bar-item w3-button"> Download</a>
+    <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
+    <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
+    
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item  w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-large w3-padding-16">Close ×</a>
+  <a href="home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="about.html" class="w3-bar-item w3-button"> About</a>
+  <a href="research.html" class="w3-bar-item w3-button">Research</a>
+  <a href="publications.html" class="w3-bar-item w3-button"> Publications</a>
+  <a href="download.html" class="w3-bar-item w3-button"> Download</a>
+  <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
+  <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
+</nav>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding-top:8%; padding-bottom:3%">
+  <div class="w3-row-padding w3-white">
+    <p class="w3-justify">
+        
+    <p>These are some suggested readings about WINGS.  More articles are available in the <a href="publications.html">Publications</a> page.</p>
+    <p>This paper is an introduction to semantic workflows for scientists:</p>
+    <ul>
+    <li><a href="http://www.isi.edu/~gil/papers/gil-iemss14.pdf">Intelligent Workflow Systems and Provenance-Aware Software</a>. Yolanda Gil. Proceedings of the Seventh International Congress on Environmental Modeling and Software, San Diego, CA, 2014.</li>
+    </ul>
+    <p>This paper provides a good introductory overview of how users can interact with WINGS:</p>
+    <ul>
+    <li><a href="http://www.isi.edu/~gil/papers/gil-etal-aaaifss10.pdf">Assisting Scientists with Complex Data Analysis Tasks through Semantic Workflows</a>. Yolanda Gil, Varun Ratnakar, and Christian Fritz. AAAI Fall Symposium Series on Proactive Assistant Agents, Arlington, VA, November 2010.</li>
+    </ul>
+    <p>This paper has a general overview of workflows and outlines research challenges in semantic workflows:</p>
+    <ul>
+    <li><a href="http://www.isi.edu/~gil/papers/gil-sp08.pdf">From Data to Knowledge to Discoveries: Scientific Workflows and Artificial Intelligence</a>. Yolanda Gil. Scientific Programming, Volume 17, Number 3, 2009.</li>
+    </ul>
+    <p>This paper gives a brief overview of the workflow reasoning algorithms in WINGS:</p>
+    <ul>
+    <li><a href="http://www.isi.edu/~gil/papers/gil-etal-ieee-is-11.pdf">Wings: Intelligent Workflow-Based Design of Computational Experiments</a>. Yolanda Gil, Varun Ratnakar, Jihie Kim, Pedro Antonio Gonzalez-Calero, Paul Groth, Joshua Moody, and Ewa Deelman. To appear in IEEE Intelligent Systems, 26(1), 2011.
+    </li></ul>
+    <p>This paper has a formal description of the WINGS workflow representation language and detailed workflow reasoning algorithms:</p>
+    <ul>
+    <li><a href="http://www.isi.edu/~gil/papers/gil-etal-jetai10.pdf">A Semantic Framework for Automatic Generation of Computational Workflows Using Distributed Data and Component Catalogs</a>. Yolanda Gil, Pedro Antonio Gonzalez-Calero, Jihie Kim, Joshua Moody, and Varun Ratnakar. Journal of Experimental and Theoretical Artificial Intelligence, 2010.</li>
+    </ul>
+  
+    </p>
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black ">
+    <div class="w3-container">
+      <p class="w3-justify">We are grateful for funding from the National Science Foundation under grants CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants NIH U24 MH068457 and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants HR0011-07-C-0060 and W911NF-15-1-0555, and from the Air Force Research Laboratory under grant FA8750-06-C-0210.</p>
+     
+      <p>Site powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> <p><a href="readings.html" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
+    </div>
+    <!--class="w3-light-grey w3-button" -->
+  
+</footer>
+ 
+<script>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+ 
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<title>People</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/logoMini.png">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+    background: #edf5fa;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+    
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+dd.people {
+    height: 200px;
+    background: #ddd;
+    padding: 5px;
+    margin: 2px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #999;
+    float: left;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white2 w3-card" id="myNavbar">
+    <img class="w3-bar-item" src="images/garland_logo.png" alt="WINGS LOGO"/> 
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="home.html" class="w3-bar-item w3-button">Home</a>
+      <a href="about.html" class="w3-bar-item w3-button"> About</a>
+      <a href="research.html" class="w3-bar-item w3-button">Research</a>
+      <a href="publications.html" class="w3-bar-item w3-button"> Publications</a>
+      <a href="download.html" class="w3-bar-item w3-button"> Download</a>
+    <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
+    <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
+    
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item  w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-large w3-padding-16">Close ×</a>
+  <a href="home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="about.html" class="w3-bar-item w3-button"> About</a>
+  <a href="research.html" class="w3-bar-item w3-button">Research</a>
+  <a href="publications.html" class="w3-bar-item w3-button"> Publications</a>
+  <a href="download.html" class="w3-bar-item w3-button"> Download</a>
+  <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
+  <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
+</nav>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding-top:8%; padding-bottom:3%">
+  <div class="w3-row-padding w3-white">
+    <h3>Group Members:</h3>
+    <dd class="people"><a href="http://www.isi.edu/~gil">Yolanda Gil</a><br>
+    <a href="http://www.isi.edu/~gil"><img src="http://www.isi.edu/ikcap/images/gil.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="http://www.isi.edu/~varunr">Varun Ratnakar</a><br>
+    <a href="http://www.isi.edu/~varunr"><img src="http://www.isi.edu/ikcap/images/varunr.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people">Daniel Garijo<br>
+    <img src="https://knowledgecaptureanddiscovery.github.io/images/dgarijo.jpg" width="120"><br>
+    </dd>
+    </div>
+    
+    <div class="w3-row-padding w3-white">
+    <h3>Collaborators:</h3>
+    <dd class="people"><a href="http://sunset.usc.edu/~mattmann/">Chris Mattman</a><br>
+    <a href="http://sunset.usc.edu/~mattmann/"><img src="http://sunset.usc.edu/~mattmann/images/chris-2012.jpeg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="http://www.isi.edu/~deelman">Ewa Deelman</a><br>
+    <a href="http://www.isi.edu/~deelman"><img src="http://www.isi.edu/ikcap/images/deelman.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people">Gaurang Mehta<br>
+    <img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"><br>
+    </dd>
+    <dd class="people"><a href="http://www.isi.edu/~vahi">Karan Vahi</a><br>
+    <a href="http://www.isi.edu/~vahi"><img src="http://ccgrid2008.ens-lyon.fr/tutorials/vahi.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="https://eng.ucmerced.edu/harmongroup/harmon">Tom Harmon</a><br>
+    <a href="https://eng.ucmerced.edu/harmongroup/harmon"><img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people">Sandra Villamizar<br>
+    <img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"><br>
+    </dd>
+    <dd class="people"><a href="https://www.cs.stonybrook.edu/people/faculty/JoelSaltz">Joel Saltz</a><br>
+    <a href="https://www.cs.stonybrook.edu/people/faculty/JoelSaltz"><img src="https://www.cs.stonybrook.edu/sites/default/files/wwwfiles/Joel.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="http://cci.emory.edu/cms/people/pages/kurc_tahsin.html">Tahsin Kurc</a><br>
+    <a href="http://cci.emory.edu/cms/people/pages/kurc_tahsin.html"><img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people">Vijay S Kumar<br>
+    <img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"><br>
+    </dd>
+    <dd class="people"><a href="http://www.yale.edu/state/Christopher_Mason.html">Christopher Mason</a><br>
+    <a href="http://www.yale.edu/state/Christopher_Mason.html"><img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="https://www.uni-trier.de/?id=12983">Ralph Bergmann</a><br>
+    <a href="https://www.uni-trier.de/?id=12983"><img src="https://www.uni-trier.de/fileadmin/_processed_/3/4/csm_Bergmann2016_657177423a.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="https://en.wikipedia.org/wiki/Philip_Bourne">Philip Bourne</a><br>
+    <a href="https://en.wikipedia.org/wiki/Philip_Bourne"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Phil_E_Bourne.jpg/225px-Phil_E_Bourne.jpg" width="110"></a><br>
+    </dd>
+    <dd class="people">Jun Ma<br>
+    <img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"><br>
+    </dd>
+    <dd class="people">Andrew Philpot<br>
+    <img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"><br>
+    </dd>
+    </div>
+    
+    <div class="w3-row-padding w3-white">
+    
+    <h3>Alumni and Former Members:</h3>
+    <dd class="people"><a href="http://www.isi.edu/~fritz">Christian Fritz</a><br>
+    <a href="http://www.isi.edu/~fritz"><img src="http://www.isi.edu/ikcap/images/fritz.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="http://www.isi.edu/~moody">Joshua Moody</a><br>
+    <a href="http://www.isi.edu/~moody"><img src="http://www.isi.edu/ikcap/images/moody.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="http://pgroth.com/">Paul Groth</a><br>
+    <a href="http://pgroth.com/"><img src="http://www.isi.edu/ikcap/images/pgroth.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="http://gaia.fdi.ucm.es/people/pedro/">Pedro Gonzalez Calero</a><br>
+    <a href="http://gaia.fdi.ucm.es/people/pedro/"><img src="http://www.isi.edu/ikcap/images/pedro.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Puga:Gonzalo_Fl=oacute=rez.html">Gonzalo Florez Puga</a><br>
+    <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Puga:Gonzalo_Fl=oacute=rez.html"><img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people"><a href="http://www.comp.hkbu.edu.hk/~william/">William Cheung</a><br>
+    <a href="http://www.comp.hkbu.edu.hk/~william/"><img src="http://www.isi.edu/ikcap/images/william.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people">Larry Kite<br>
+    <img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"><br>
+    </dd>
+    <dd class="people"><a href="http://www.isi.edu/~jihie">Jihie Kim</a><br>
+    <a href="http://www.isi.edu/~jihie"><img src="http://www.isi.edu/ikcap/images/jihie.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people">Matheus Hauder<br>
+    <img src="http://www.isi.edu/ikcap/images/matheus.jpg" width="120"><br>
+    </dd>
+    <dd class="people"><a href="http://research.sethi.org/ricky/">Ricky Sethi</a><br>
+    <a href="http://research.sethi.org/ricky/"><img src="http://research.sethi.org/images/ricky_j_sethi-small.jpg" width="120"></a><br>
+    </dd>
+    <dd class="people">Hyunjoon Jo<br>
+    <img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"><br>
+    </dd>
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black ">
+    <div class="w3-container">
+      <p class="w3-justify">We are grateful for funding from the National Science Foundation under grants CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants NIH U24 MH068457 and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants HR0011-07-C-0060 and W911NF-15-1-0555, and from the Air Force Research Laboratory under grant FA8750-06-C-0210.</p>
+     
+      <p>Site powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> <p><a href="people.html" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
+    </div>
+    <!--class="w3-light-grey w3-button" -->
+  
+</footer>
+ 
+<script>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+ 
+
+</body>
+</html>

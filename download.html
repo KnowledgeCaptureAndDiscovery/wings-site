@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-<title>WINGS | Download</title>
+<title>Download</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/logoMini.png">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -38,8 +39,8 @@ body, html {
         <a href="about.html" class="w3-bar-item w3-button"> About</a>
         <a href="research.html" class="w3-bar-item w3-button"> Research</a>
         <a href="publications.html" class="w3-bar-item w3-button"> Publications</a>
-        <a href="download.html" class="w3-bar-item w3-button"> Download</a>
-        <a href="tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
+        <a href="download.html" class="w3-bar-item w3-button"><strong>Download</strong></a>
+        <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
         <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
 
       </div>
@@ -58,38 +59,88 @@ body, html {
     <a href="about.html" class="w3-bar-item w3-button"> About</a>
     <a href="research.html" class="w3-bar-item w3-button"> Research</a>
     <a href="publications.html" class="w3-bar-item w3-button"> Publications</a>
-    <a href="download.html" class="w3-bar-item w3-button"> Download</a>
-    <a href="tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
+    <a href="download.html" class="w3-bar-item w3-button"><strong>Download</strong></a>
+    <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
     <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
   </nav>
 
   <!-- About Section -->
-<div class="w3-container" style="padding:128px 16px">
+<div class="w3-container" style="padding-top:8%; padding-bottom:3%">
   <div class="w3-row-padding w3-white">
-    <p class="w3-justify">
-    <h3 class="w3-center">Wings Portal Download Page</h3>
+    <div class="w3-justify">
+<h3>Description</h3>
 <p>WINGS (Workflow INstance Generation and Specialization) is a semantic workflow system. The WINGS Portal is provided as a WAR file (Web Application ARchive) and runs in a Tomcat Server. It is backed by a Jena TDB Triple store as the Knowledge Base, and the PELLET Reasoner to do reasoning over it. We also use basic Jena Rules to do component-level reasoning. </p>
 <p>The function of the WINGS Portal is to interact with users to provide assistance in creating workflows. It runs on a Web browser, so that no code needs to be installed or downloaded to interact with the system. It allows users to: 1) upload and describe datasets, 2) upload and describe workflow components, 3) create workflows, 4) set up and execute workflows, 5) examine execution results and their provenance. It has an open modular design and can be easily integrated with other existing workflow frameworks. It is built on open web standards from the World Wide Web Consortium (W3C) such as the Web Ontology Language (OWL), the Resource Description Framework (RDF), and the SPARQL query language for RDF.</p>
-<center><h3>Download</h3></center>
+<h3>Download</h3>
 <p>By clicking any of the following links and/or downloading the software they refer to by any other means you agree to comply with the <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License Version 2.0</a><br />
-For instructions on how to install Wings, please follow these <a href="https://raw.githubusercontent.com/IKCAP/wings/master/README">Installation Instructions</a></p>
+For instructions on how to install Wings, please follow these <a href="https://github.com/KnowledgeCaptureAndDiscovery/wings/blob/master/README.md">Installation Instructions</a>.</p>
+
+<h4><a href="release/wings-portal-4.0-SNAPSHOT.war">Download latest WINGS Portal</a></h4> (MD5 hash: 743de002e77833b16951a55dbe8ba382, Released on 6 February 2016).
+
+<h5>Release details</h5>
+A summary of changes from the previous version (3.0-SNAPSHOT):
+
 <ul>
-<li>
-<h4><a href="../node/17663/release">Download Wings Portal</a></h4>
-</li></ul>
-<p>The Source code is available from github: <a href="https://github.com/IKCAP/wings" title="https://github.com/IKCAP/wings">https://github.com/IKCAP/wings</a></p>
+    <li>You will see 2 menus on the top right. These are quick ways to show the Domain you are viewing, and the user that you are viewing. In order to switch the domain and user, you can use these menus as well.
+    </li>
+    <li>Now a user can Share Domains, and you can see & edit them. Currently the permissions are all or nothing, i.e. you can write to the shared domain as well. For example, if you go to nayely's account, you can see the domain that she has shared. Once you’ve done that, you can go to “Run Workflows”, “Manage Data” as you normally do and you will see her information. We allow sharing domains with particular users as well.
+    </li>
+    <li>
+    We can set the Permissions for a domain.
+    </li>
+    <li>
+    You can set the Execution Engine to distributed using the “Manage Domain” interface.
+    </li>
+    <li>
+    Provenance tab (for Templates, Data, Datatypes, Components, Component Types and Users). Provenance is stored using PROV-O Standard.
+    </li>
+    <li>
+    Manage Users interface. A quick way to add, delete users, and set their passwords. This interface also has the provenance tab that shows you what the user has done.
+    </li>
+    <li>
+    Revamped icons. Using Font-based Icons for more flexibility, light weight, and better appearance with high-res retina displays.
+    </li>
+</ul>
+<h3>GitHub</h3>
+<p>The latest development version of WINGS is available on GitHub: <a href="http://github.com/knowledgecaptureanddiscovery/wings" title="http://github.com/knowledgecaptureanddiscovery/wings">http://github.com/knowledgecaptureanddiscovery/wings</a>
+</p>
+<h3>Docker</h3>
+<p>
+If you are familiar with Docker, we also have a WINGS Docker image. Check <a href="https://github.com/KnowledgeCaptureAndDiscovery/wings-docker">our instructions</a> on how to download it and a <a href="https://dgarijo.github.io/Materials/Tutorials/wings-docker/#sec2-1">tutorial</a> with usage examples.
 </p>
 </div>
 </div>
+</div>
 
 
-      <!-- Footer -->
-      <footer class="w3-center w3-black w3-padding-64">
-        <a href="download.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<!-- Footer -->
+<footer class="w3-center w3-black ">
+    <div class="w3-container">
+      <p class="w3-justify">We are grateful for funding from the National Science Foundation under grants CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants NIH U24 MH068457 and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants HR0011-07-C-0060 and W911NF-15-1-0555, and from the Air Force Research Laboratory under grant FA8750-06-C-0210.</p>
+     
+      <p>Site powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> <p><a href="download.html" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
+    </div>
+  
+</footer>
+ 
+<script>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
 
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-      </footer>
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
 
 
-    </body>
-    </html>
+</body>
+</html>
