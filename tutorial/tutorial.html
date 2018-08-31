@@ -123,7 +123,15 @@ margin-top: -90px;
           <h3 id="WINGS_Portal">WINGS Portal</h3>
           <p>For users that want to browse and execute workflows that are already pre-defined in the system by others. We give you an easy overview of Wings based on a public <a href="http://www.wings-workflows.org/wings-portal/" target="_blank">''Portal''</a> (a place to play around). You can also create your own workflows using components that others have already pre-defined. Wings works in the browser, so there is no software to install if you use our web site and you can get started right away.</p>
           
+          <p>In order to use the portal, 
+          <a href="mailto:gil@isi.edu?Subject=URL%20Encoded%20Subject&amp;body=Body%20requesting%20a%20Wings%20Portal%20account">email us to set up an account</a>.
+          </p>
+          
           <p>If you are interested in installing the software, check our <a href="../download.html">download page</a>.</p>
+          
+          <p> The following video shows an overview of this tutorial by  creating and running a sample Text Analytics Workflow:<br>
+            <iframe src="http://www.youtube.com/embed/p6yhkr1lywM" allowfullscreen="" width="420" height="315" frameborder="0"></iframe>
+         </p>
 
           <h2 id="What_You_Will_Learn_To_Do_in_This_Tutorial">1.1. What you will Learn to do in this Tutorial</h2>
       
@@ -760,8 +768,93 @@ margin-top: -90px;
             <p><img onload="this.width/=2;this.onload=null;" src='images/Comp33.png' />
             </p></li>
             </ol>
+            
+            
+            
+          <h2 id="manage_components_docker"> 3.5. Manage Components in Containers</h2>
+          <p> In recent years several approaches for containerizing software have emerged, in order to facilitate software reproducibility. In this section, we showcase how to use containers in WINGS. We use <a href="https://docs.docker.com">Docker</a> in our example due to its popularity, but other approaches may be adopted in a similar way.  
+          </p>
+          
+		  <ol>
+            <li>
+            <div class='stepdesc'>
+            Install Docker in your WINGS server: <a href="https://docs.docker.com/engine/installation/">https://docs.docker.com/engine/installation/</a>. Try downloading a sample image to test its functionality with the following command: 
+            <pre>docker run hello-world</pre>
+             You should see the following on your screen:
+            </div>
+           
+		  <div class="center">				
+					<img src="images/ho4_im7.png" alt="Component example" width="600">		
+			</div>
+            </li>
+            
+            <li>
+            <div class='stepdesc'>
+            <p>
+             In the previous example we have created a container for the image “hello-world” and we have executed it. 
+            Docker has a local repository where it stores the images we create. Some images are stored on default repositories online, such as the one we just retrieved. When we try to execute an image, Docker tries to find it online (e.g., on the <a href="https://hub.docker.com">Docker hub repository</a>). If the system finds it, it will download it to our local repository. To browse over the images stored in your local repository, run the following command: docker images. At the moment you should only see the “hello-world” image.
+            </p>
+            <p>
+            Download an Ubuntu image. Execute the following command: 
+            <pre>docker run ubuntu</pre>
+            This will install a whole clean Ubuntu image on your local repository. In order to test it, run any unix command like: 
+            </p>
+		
+            <pre>docker run ubuntu echo hello world</pre> 
+            <p>
+            You should see something similar to the following:
+        </div>
 
-          <h2 id="Edit_Workflows"> 3.5. Edit Workflows</h2>
+		</p>
+		  <div class="center">				
+					<img src="images/ho4_im8.png" alt="Running a Docker container with an ubuntu image" width="700">
+				 </div>
+		<p>
+		 
+		Which is the same output you would obtain when executing that command in a terminal. If your software is widely used, someone probably will have created an image and posted it online. In this example we will show how to reuse an image for samtools, a commonly used biomedical software. 
+		</p>
+        </li>
+        <li>
+            <div class='stepdesc'>
+            <p>
+            <strong>Action</strong>: Download a samtools image and test it on your local computer. After looking in docker hub, we can see that the official release for samtools is comics/samtools. Therefore, in order to import it to our local domain, we just have to perform the following command:
+            <pre>docker pull comics/samtools</pre>
+            Which will download the latest version. You can also specify the version by using the tag. For example comics/samtools:v1. Now you can try to execute the image locally, to see whether it works. Let's try to invoke the mpileup software: 
+            <pre>docker run comics/samtools samtools mpileup</pre>
+            Since we have not specified any inputs, you will see the following on screen.
+            </p>
+            </div>
+            <div class="center">				
+                <img src="images/ho4_im9executingImage.png" alt="Executing the comics/samtools image locally" width="700">
+             </div>
+            Basically, the program runs, but it is asking for its correct usage (we didn't invoke it correctly). Since the mpileup software requires three inputs, in this tutorial we are going to choose a simpler function from the samtools software: sort, which sorts an input bam file. In order to be able to pass the inputs file to our docker container, we need to mount a volume, i.e., tell the system that we want to share a folder with the container. This can be done with the “-v” option. 
+            </p>
+        </li>
+        <li>
+            <div class='stepdesc'>
+            <p>
+            Execute the following command: 
+            <pre>docker run -v PathToFolderYouWantToShare:/out comics/samtools samtools sort -o 
+    /out/sorted.bam /out/inputFileToSort.bam</pre> 
+            Where the PathOfTheFolderYouWantToShare is the folder where you have your input file ("inputFileToSort.bam"). This will result in a sorted file ("sorted.bam") of the input file “inputFileToSort” in the folder "PathToFolderYouWantToShare". Now that we have tested our image locally, we should test it in Wings.</p>
+            </div>
+          </li>
+          
+          <li>
+            <div class='stepdesc'>  
+            <p>
+            Create a component in WINGS and use the Docker image to invoke it (you can find <a href="test.zip">a component template in this link</a>). The component should look similar to the picture below:
+            </div>
+		<div class="center">				
+			<img src="images/ho4_im10WingsComp.png" alt="WINGS component using a Docker image" width="700">
+		 </div>
+         <div class='stepdesc'> 
+		<p>The script is similar to the console command we have executed locally, but copies the input to a temporary folder. This way if we have ten instances of the component at the same time, they will read the appropriate temporary folder. The temporary folder is mounted in WINGS using the "-v" Docker command we have used previously. The outputs are copied to the corresponding WINGS output (using "cp"), and the local files are removed ("rm" command).</p>
+        </div>
+		</li>
+        </ol>
+
+          <h2 id="Edit_Workflows"> 3.6. Edit Workflows</h2>
             <ol class="steps">
             <li>
             <div class='stepdesc'>
@@ -1099,7 +1192,9 @@ margin-top: -90px;
             </p></li>
             </ol>
 
+          <!--  
           <h2 id="BCE"> 3.2. Basic Component Encapsulation</h2>
+          -->
 
 
       <h1 id="Workflow_Admin">4. Workflow Administrators</h1>
@@ -1169,7 +1264,7 @@ margin-top: -90px;
             <div class="stepdesc">
             In the component definition (Manage Components), we should specify the minimum software version that is required by the component. This software should be defined as mentioned above.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='fResources8.png' />
+            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources8.png' />
             </p></li>
             <li>
             <div class="stepdesc">
@@ -1343,9 +1438,10 @@ margin-top: -90px;
 <!-- Footer -->
 <footer class="w3-center w3-black ">
     <div class="w3-container">
+    <br/>
       <p class="w3-justify">We are grateful for funding from the National Science Foundation under grants CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants NIH U24 MH068457 and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants HR0011-07-C-0060 and W911NF-15-1-0555, and from the Air Force Research Laboratory under grant FA8750-06-C-0210.</p>
      
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> <p><a href="about.html" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> <p><a href="#Getting_Started" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
     </div>
     <!--class="w3-light-grey w3-button" -->
   
