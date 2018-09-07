@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../images/logoMini.png">
 <link rel="stylesheet" href="../css/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -15,7 +14,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
-<script src = "../lazysizes.min.js"></script>
+<script src = "../js/lazysizes.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118863115-1"></script>
 <script>
@@ -67,6 +66,9 @@ margin-top: -90px;
 .affix {
     position: fixed;
     width:25%;
+}
+img{
+width:80%;
 }
 </style>
 <body data-spy="scroll" data-target="#toc">
@@ -175,7 +177,9 @@ margin-top: -90px;
             <p>Workflows manipulate <b>datasets</b> contained in files. In this case, files can be of one of these types: a formatted file (which can be an HTML file or a PDF file), a pattern file (which can be a file containing common words or containing special characters), etc.</p>
             <p>Each dataset has associated <b>metadata properties</b> that describe its contents or anything else that is important about the dataset. For example, an HTML file has a size and a language properties.</p>
             <p>To view the data and corresponding metadata properties that are used in this site, you can select "Manage Data" under the "Advanced" tab:</p>
-            <p><img onload="this.width/=2;this.onload=null;" src="images/ManageDataLA.png"/></p>
+            
+            <p><img class="lazyload" data-src="images/ManageDataLA.png" alt="Managing data"></p>
+            
             <p>We have uploaded a few sample datasets. In the figure above, the "en_Los_Angeles.html" dataset has been selected, which shows that its language is "english", its size is 411610, and its topic is "city". We will see later on how Wings reasons about these properties when the datasets are used in the workflows.</p>
             <p><span style="color:#228B22"><i>NOTE: Behind the scenes, Wings uses a Data Catalog that contains all this information, and it represents types and properties as OWL ontologies and RDF statements. You will not see any of these ontologies in the interface, but the system uses them to reason about workflows.</i></span></p>
             <p>We have pre-defined several kinds of <b>workflow components or steps</b>, which are software components that can be executed to process the datasets. Each component has <b>input datasets</b> that it processes, it has <b>input parameters</b> that can configure its function, and <b>outputs</b> that result from its execution. An example is <i>countDuplicates</i>, which takes as input a file of type WordListFile and a parameter that determines a threshold for a minimum set of occurences to be included, and outputs a file of type wordCountFile.</p>
@@ -194,43 +198,45 @@ margin-top: -90px;
             <h3 id="Viewing_a_Workflow">1.3.1. Viewing a Workflow </h3>
               <p>You can browse and run workflows that are pre-defined in the system. You do this by selecting "Run Workflows" under the Analysis Tab. There are several workflows that, as we will explain, are different but they all output an assessment of whether a dataset is similar to a given corpus by comparing the amount of words that appear in both. We will look into these workflows in more detail throughout the tutorial.</p>
               <p>You can <b>view a workflow</b> by selecting it. If you select the workflow named "English Words" you will see its semantic constraints:</p>
-              <p>  <img onload="this.width/=2;this.onload=null;" src="images/EnglishWordsConstraints.png" /></p>
+              
+              <p>  <img class="lazyload" data-src="images/EnglishWordsConstraints.png"/></p>
+              
               <p>This table shows the semantic constraints on the data variables of the workflow. For example, Words1 has to be of type WordListFile. It also shows that the Words1 should also haveLanguage 'english'.</p>
               <p>You will also see a diagram that shows the dataflow among components:</p>
-              <p>  <img onload="this.width/=2;this.onload=null;" src="images/WordsGraph.png" /></p>
+              <p>  <img class="lazyload" data-src="images/WordsGraph.png" /></p>
               <p>You can find a description of what the workflow does under the "Documentation" tab:</p>
-              <p>  <img onload="this.width/=2;this.onload=null;" src="images/WordsDocumentation.png" /></p>
+              <p>  <img class="lazyload" data-src="images/WordsDocumentation.png" /></p>
               <p>The workflow diagram shows the dataflow among the steps of the workflow. These steps are shown as light orange rectangles. For example, there is a step called <i>html2text</i>, it takes an HTML file as input and it generates a file in plain text without the HTML markup. Each dataset in the workflow has a variable associated with it that is unique within the workflow. For example, one of the input files is called <i>Words1</i>. Datasets in the workflow are shown in blue ovals. Input Datasets are shown in green ovals. Workflow steps can have parameters that control their behavior. For example the <i>countDuplicates</i> step has a <i>Doc1MinLimitOccurances</i> parameter that does not list words in the output that appear less times than the value of that threshold. Parameters also have unique variables associated with them, and are shown as orange ovals.</p>
               <p><span style="color:#228B22"><i>NOTE: The workflow representations used internally in Wings are more complex than what is shown in the user interface. They are used by the system but we do not explain them in this introductory guide. Please consult our <a href="#Workflow_Developers">Advanced Tutorial</a> to learn more.</i></span></p>
 
           <h3 id="Setting_Up_a_Workflow_by_Selecting_Data_and_Parameters"><span class="mw-headline">1.3.2 Setting Up a Workflow by Selecting Data and Parameters</span></h3>
             </p><p>When you are viewing a workflow, you will see a set of menus at the top. For each dataset that is input to the workflow, Wings will show you a pull down menu with all the datasets that are of an appropriate type. For each input parameter, it will allow you to specify a value and it will indicate the type expected. If you select an input dataset, it will be highlighted in the workflow view in bright yellow. The constraints associated with it will also be highlighted.</p>
             <p>For our example workflow, you will see the following:</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/SettingUpWorkflow.png" /></p>
+            <p>  <img class="lazyload" data-src="images/SettingUpWorkflow.png" /></p>
             <p>Notice that Wings is already helping you by giving you only options for input files that might be appropriate for this workflow by reasoning about types. In this case only html files are offered for selection.</p>
             <p>As shown below, Complete all inputs by Selecting from the menus of input files offered. Enter some value for the two parameters, a good value to provide is 3</p>
-            <p> <img onload="this.width/=2;this.onload=null;" src="images/EnglishWordsPlan.png" /></p>
+            <p> <img class="lazyload" data-src="images/EnglishWordsPlan.png" /></p>
             <p><span style="color:#228B22"><i>NOTE:</i> We will see in a later section how Wings can validate your workflow by alerting you of inappropriate parameter settings, and help you by suggesting correct parameters values.</span></p>
             <p>That's it! You are now ready to run your workflow.</p>
           
       
           <h3 id="Executing_a_Workflow"><span class="mw-headline">1.3.3 Executing a Workflow</span></h3>
             <p>Once you have selected input datasets and parameter values, you can select "Plan Workflow" to submit your workflow for execution. To execute the workflow, select the desired workflow you would like to run and select "Run Selected Workflow":</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/ExecutingWorkflow.png" /></p>
+            <p>  <img class="lazyload" data-src="images/ExecutingWorkflow.png" /></p>
             <p>The workflow will run in the background.</p>
             <p>You can view the results by selecting the "Access Runs" in the "Analysis" tab. The workflow takes a few minutes to execute. You can refresh the page, and see a report of its progress:</p>
             <p><span style="color:#228B22"><i>NOTE: Behind the scenes, the workflows in the portal can be executed by a variety of execution engines. For the purposes of the sandbox, they are converted into and executed as a shell script.</i></span></p>
 
           <h3 id="Viewing_Execution_Results"><span class="mw-headline">1.3.4 Viewing Execution Results</span></h3>
             <p>You can view execution results at any time by selecting "Access Runs" in the "Analysis" tab. All the workflows that you have successfully submitted for execution are shown there. For each workflow execution, you can view the results, the logging output, and the workflow used.</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/runResult.png" /></p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/store_data.png" /></p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/results_log.png" /></p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/results_workflow.png" /></p>
+            <p>  <img class="lazyload" data-src="images/runResult.png" /></p>
+            <p>  <img class="lazyload" data-src="images/store_data.png" /></p>
+            <p>  <img class="lazyload" data-src="images/results_log.png" /></p>
+            <p>  <img class="lazyload" data-src="images/results_workflow.png" /></p>
             <p>In the "Data" tab, you can click on any intermediate and final datasets and view them. You can also see a report of how many times each component was invoked, and how long it took.</p>
             <p>In addition, you can save any generated output files back into the data store for later use. To do so click the "Save" link next to the file name. You will be asked to give a more appropriate name to the file. Note that the file will be stored with all the meta-data that Wings has inferred about it! This is one of the distinguishing features of Wings, possible due to the use of semantic annotations and propagation of meta-data properties. So for instance, after executing a very simple workflow that creates a WordCountFile from a TextFile, and saving it back into the data store, when we go back to "Manage Data" (under 'Advanced' tab), we can see the newly created file in the appropriate semantic "folder", "WordCountFile". Note that its meta-data properties are already filled in, as they were inferred by Wings.<br />
-            <img onload="this.width/=2;this.onload=null;" src="images/stored_data_save.png" /><br />
-            <img onload="this.width/=2;this.onload=null;" src="images/stored_data.png" /></p>
+            <img class="lazyload" data-src="images/stored_data_save.png" /><br />
+            <img class="lazyload" data-src="images/stored_data.png" /></p>
             
             <h2 id="General_Tips">1.4 General Tips</h1>
               <p><ul>
@@ -260,53 +266,53 @@ margin-top: -90px;
 
           <h2 data-toc-text="2.1 Setting up Workflow Parameters" id="Getting_Wings_to_Help_Set_Up_Workflow_Parameters"><span class="mw-headline">2.1 Getting Wings to Help Set Up Workflow Parameters</span></h2>
             <p>Wings can propose parameter values for a workflow once you have selected what datasets you want to use. To do this, Wings reasons about semantic constraints that determine the best values of parameters based on metadata properties of the datasets you have selected. Once you have selected the input datasets for your workflow, you can select the "Suggest Parameters"button:</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/ParameterSuggestion.png" /></p>
+            <p>  <img class="lazyload" data-src="images/ParameterSuggestion.png" /></p>
             <p>A pop up window shows you suggested parameter values. In this case, there is a constraint that the threshold parameters should be set depending on the metadata property <i>size</i> of the input. If you select a different input dataset, then the system will suggest different values for these parameters.  The pop up window offers this explanation highlighted in blue.  The explanation also contains other inferences that Wings has made based on propagating constraints throughout the workflow.  The suggestions for parameter values often depend on these inferences, which are not part of the semantic constraints table that you see for the workflow.</p>
 
           <h2 data-toc-text="2.2 Finding Relevant Datasets" id="Getting_Wings_to_Help_You_Find_Relevant_Datasets"><span class="mw-headline">2.2 Getting Wings to Help You Find Relevant Datasets</span></h2>
             <p>You can also ask Wings for suggestions on what datasets to use. Here, we can select input files and ask for suggestions for pattern files by selecting the "Suggest Data"button:</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/DataSuggestion.png" /></p>
+            <p>  <img class="lazyload" data-src="images/DataSuggestion.png" /></p>
             <p>Using a constraint that states that the pattern files must have the same <i>language</i> as the input files, Wings suggests appropriate pattern files from all those available.  An explanation is shown to justify why the particular datasets suggested are appropriate.  This explanation consists of semantic constraints that have been propagated through the workflow by Wings and that are not part of the semantic constraints table of your workflow description.</p>
 
           <h2 data-toc-text="2.3 Parallel Processing of Collections of Data" id="Getting_Wings_to_Manage_the_Parallel_Processing_of_Collections_of_Data"><span class="mw-headline">2.3 Getting Wings to Manage the Parallel Processing of Collections of Data</span></h2>
             <p>Wings can reason about a collection of datasets so that it is processed in parallel by the workflow. For example, if you select the <b>Words Coll</b> workflow you will see:</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/WordsColl.png" /></p>
+            <p>  <img class="lazyload" data-src="images/WordsColl.png" /></p>
             <p>A multi-layered oval in the workflow diagram indicates that it is a data collection. When you select inputs for this variable, the drop down menu will allow you to select several files at a time. You can see at the bottom of the screen a comment that it is a collection.</p>
             <p>Try for example selecting multiple html files, and submit the workflow for execution. When you Plan Workflow, you can see that multiple html2text components are created (in this case we selected 4 files so the component was executed once for each of the 4 files):</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/WordsCollExecution.png" /></p>
+            <p>  <img class="lazyload" data-src="images/WordsCollExecution.png" /></p>
             <p><span style="color:#228B22"><i>NOTE: In this case, the collection of html files is one-dimensional, as it is a list of files. Wings can handle multi-dimensional collections of datasets, as well as collections of workflow components.</i></span></p>
             
           <h2 id="Getting_Wings_to_Validate_Your_Workflow"><span class="mw-headline">2.4 Getting Wings to Validate Your Workflow</span></h2>
             <p>If you select input files and parameter settings that are inconsistent with the semantic constraints that are defined in the system, Wings will detect that and let you know that your workflow is invalid. For example, in the <b>English_Words</b> workspace, we mentioned earlier a constraint that the language of the input files and the language of the pattern files has to be the same. If we select files with disparate languages and then we submit this workflow for execution, Wings will inform us that we have an invalid workflow:</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/WorkflowInvalidDatasets.png" /></p>
+            <p>  <img class="lazyload" data-src="images/WorkflowInvalidDatasets.png" /></p>
             <p>Wings can also alert a user if no workflow is possible for the selected input data. In the following example, the file selected in French and there are no pattern files available in that language that could be used:</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/WorkflowNoDatasets.png" /></p>
+            <p>  <img class="lazyload" data-src="images/WorkflowNoDatasets.png" /></p>
             <p>Wings figures this out based on the semantic constraint for removePattern that its input pattern files have to be in the same language as the input word list files.</p>
             <p>This validation capability is very helpful, as Wings is keeping track for the user of all the constraints that are defined in the domain and ensuring that any workflow that a user creates is valid.</p>
 
           <h2 id="Getting_Wings_to_Specialize_an_Abstract_Workflow"><span class="mw-headline">2.5 Getting Wings to Specialize an Abstract Workflow</span></h2>
             <p>In Wings, workflows can have abstract components that represent a class of executable components. Select for example the <b>"Words Abs"</b> workflow:</p>
-            <p><img onload="this.width/=2;this.onload=null;" src="images/WordAbs2.png"/></p>
+            <p><img class="lazyload" data-src="images/WordAbs2.png"/></p>
             <p>The component removeMarkup is a class of components that includes two executables: html2text and pdf2text. Depending on what kind of data is input to the workflow, the appropriate executable will be selected.</p>
             <p>Note that this workflow is similar to the Words workflow except it is more general, as it can take in any formatted file (i.e., either an HTML or a PDF File). The "removeMarkup"component is an abstract step, and the system will specialize it automatically as an html Markup removal step or a pdf markup removal step depending upon the type of the input that is given to it.</p>
             <p>Try for example an html file and a pdf file, and submit the workflow for execution. When you access the computation results you can see that the html2text component was used for the html file and pdf2text was used for the pdf file</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/WordAbsExecution.png" /></p>
+            <p>  <img class="lazyload" data-src="images/WordAbsExecution.png" /></p>
             <p>You can also specify components when running a workflow. On the workflow running page, select the abstract component you want to specify. A dropdown will pop up at the bottom of the page that allows you to select the specific component you want to use for the run. </p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/SpecifyComp1.png" /></p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/SpecifyComp2.png" /></p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/SpecifyComp3.png" /></p>
+            <p>  <img class="lazyload" data-src="images/SpecifyComp1.png" /></p>
+            <p>  <img class="lazyload" data-src="images/SpecifyComp2.png" /></p>
+            <p>  <img class="lazyload" data-src="images/SpecifyComp3.png" /></p>
           
           <h2 data-toc-text="2.6 Selecting Workflow Components Automatically" id="Getting_Wings_to_Automatically_Select_Workflow_Components"><span class="mw-headline">2.6 Getting Wings to Automatically Select Workflow Components</span></h2>
             <p>Suppose that we want to process a collection of files, some are in html format and some in pdf. We would like the workflow system to select the right workflow component for removing markup for each of the files according to their format. Wings can do exactly that. For this we need to use the <b>Words_Coll_Abs</b> workflow, and what we want is for the removeMarkup step to be specialized for each component of the collection.</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/WordsCollAbs.png" /></p>
+            <p>  <img class="lazyload" data-src="images/WordsCollAbs.png" /></p>
             <p>As shown above, try for example an html file and a pdf file as inputs to FormattedFileSet1, an html file as input to FormattedFile2, and submit the workflow for execution. When you access the computation results you can see that the 2 html2text components were used, and 1 pdf2text component was used:</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/WordsCollAbsExecution.png" /></p>
+            <p>  <img class="lazyload" data-src="images/WordsCollAbsExecution.png" /></p>
             
           <h2 data-toc-text="2.7 Generating Metadata Automatically" id="Getting_Wings_to_Automatically_Generate_Metadata"><span class="mw-headline">2.7 Getting Wings to Automatically Generate Metadata</span></h2>
             <p>Wings can generate automatically metadata properties for new datasets.  In order to do this, the input datasets for the workflow must have their metadata properties specified.  You can easily upload your own datasets and specify their properties. To do that, select "Manage Data" under "Advanced". Select the type of data that you have, and then select "Upload Files":</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/Data11.png" /></p>
+            <p>  <img class="lazyload" data-src="images/Data11.png" /></p>
             <p>Now you can specify the metadata of your dataset. Wings will only ask for metadata properties defined for the type you had selected. For example, for a csv file it will ask for delimiter, language and size:</p>
-            <p>  <img onload="this.width/=2;this.onload=null;" src="images/Data16.png" /></p>
+            <p>  <img class="lazyload" data-src="images/Data16.png" /></p>
             <p>You can set the properties and click "Save Metadata" to save them</p>
             <p>Next, you can write rules for components to generate metadata for outputs. See <a href="http://wiki.wings-workflows.org/index.php/Defining_new_Data_and_Component_Catalogs_Tutorial#Advanced_Semantic_Constraints_of_Components" title="http://wiki.wings-workflows.org/index.php/Defining_new_Data_and_Component_Catalogs_Tutorial#Advanced_Semantic_Constraints_of_Components">http://wiki.wings-workflows.org/index.php/Defining_new_Data_and_Componen...</a> for examples.</p>
             <p>If you go and select a workflow to run, your new dataset will show up when you select input datasets for workflows.  Wings will use them to create metadata properties of new datasets, and also for tailoring its assistance to those properties of your dataset.</p>
@@ -319,13 +325,13 @@ margin-top: -90px;
                 <div class='stepdesc'>
                 Open "Manage Domain" page from the Portal Navigation Menu.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain1.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain1.png' style="width:50%" /></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 This is the "Manage Domain" interface.<br />
                 In here, we can add/delete domains, import/download domains, set the default domain, set domain permissions and other properties.<br />
-                <img onload="this.width/=2;this.onload=null;" src='images/Domain2.png' />
+                <img class="lazyload" data-src='images/Domain2.png' />
                 </div>
               </li>
               <li>
@@ -333,74 +339,74 @@ margin-top: -90px;
                 You can only work on one domain at a time.<br />
                 In order to set the default domain, select the Domain from the list, and click "Use"
                 </a></div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain3.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain3.png' /></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 The "CompareFiles" domain as shown below below is now marked as the Default (Is in BOLD)
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain4.png' />
+                <p><img class="lazyload" data-src='images/Domain4.png' />
                 </p>
               </li>
               <li>
                 <div class='stepdesc'>
                 Click on "Add Domain" to create a new domain.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain5.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain5.png' style="width:50%"/></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 Enter the new domain name in the popup window.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain6.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain6.png' style="width:50%" /></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 Click on "Import Domain" to import an existing domain
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain7.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain7.png' style="width:50%"/></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 We can either give a pointer to an existing domain Zip file, or upload one. Here we are pointing to a domain zip file present in the wings servers. Other domains can be found here: <a href="http://www.wings-workflows.org/domains">http://www.wings-workflows.org/domains</a>
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain8.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain8.png' /></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 Select a domain, and click on Execution Engine -> "Local" or "Distributed" to change how it is run. Note, for Distributed Execution Engine, make sure that the distributed "Resources" and machines have been appropriately defined in the "Manage Resources" interface.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain9.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain9.png' /></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 Select a domain and click on "Set Permissions" to set Domain permissions.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain10.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain10.png' /></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 In the window that opens, select the users to give permission to. These users will be able to view and edit everything in this domain, as well as being able to run workflows in this domain.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain11.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain11.png' /></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 Click on "Download" to download the domain zip file. This can be shared with other users.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain12.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain12.png' style="width:30%"/></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 Click on "Rename" to rename a domain.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain13.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain13.png' style="width:30%"/></p>
               </li>
               <li>
                 <div class='stepdesc'>
                 Click on "Delete" to delete a domain.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Domain14.png' /></p>
+                <p><img class="lazyload" data-src='images/Domain14.png' style="width:30%"/></p>
               </li>
         </ol>
 
@@ -414,62 +420,62 @@ margin-top: -90px;
                 <div class="stepdesc">
                 Open "Manage Data" page from the Portal Navigation Menu.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data1.png'/></p>
+                <p><img class="lazyload" data-src='images/Data1.png'/></p>
               </li>
               <li>
                 <div class="stepdesc">
                 This is the "Manage Data" interface.<br />
                 In here, we can add Datatypes, Upload data and add metadata properties.
                 </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/Data2.png'/>
+              <p><img class="lazyload" data-src='images/Data2.png'/>
               </p></li>
               <li>
               <div class="stepdesc">
               First, select (in yellow) the Parent Datatype for the new datatype that we will create. Here we have selected "TextFile"
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/Data3.png' />
+              <p><img class="lazyload" data-src='images/Data3.png' />
               </p></li>
               <li>
                 <div class="stepdesc">Click on the "Add" Button, and select "Add Datatype". Alternatively, you can right-click on the parent Datatype and then click on "Add Datatype" menu item.
                 </a></div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data4.png' /><br />
-                <img onload="this.width/=2;this.onload=null;" src='images/Data4.1.png' /></p>
+                <p><img class="lazyload" data-src='images/Data4.png' style="width:50%"/><br />
+                <img class="lazyload" data-src='images/Data4.1.png' style="width:50%"/></p>
               </li>
               <li>
                 <div class="stepdesc">
                 A window will popup asking for the name of the new Datatype.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data5.png' /></p>
+                <p><img class="lazyload" data-src='images/Data5.png' style="width:50%"/></p>
               </li>
               <li>
                 <div class="stepdesc">
                 The newly created Datatype "CSVFile" appears.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data6.png' /></p>
+                <p><img class="lazyload" data-src='images/Data6.png' style="width:50%"/></p>
               </li>
               <li>
                 <div class="stepdesc">
                 Click on the new Datatype to see it's Metadata Properties. The Metadata Properties are divided into two halves. The top one is editable, and contains the Properties defined for this Datatype. The bottom half is not editable, and displays the properties that are inherited from Parent Datatypes.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data7.png' /></p>
+                <p><img class="lazyload" data-src='images/Data7.png' /></p>
               </li>
               <li>
                 <div class="stepdesc"> To add a property for the Datatype, click the "Add Property" button.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data8.png' /></p>
+                <p><img class="lazyload" data-src='images/Data8.png' /></p>
               </li>
               <li>
                 <div class="stepdesc">
                 Here, you can specify the Property, and the Property range.<br />
                 As of now, the range of the property can only be one of 5 primitive datatypes.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data9.png' /></p>
+                <p><img class="lazyload" data-src='images/Data9.png' /></p>
               </li>
               <li>
                 <div class="stepdesc">
                 Then click on "Save" to store the metadata property
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data10.png' /></p>
+                <p><img class="lazyload" data-src='images/Data10.png' style="width:30%"/></p>
               </li>
 
 
@@ -479,41 +485,41 @@ margin-top: -90px;
                 <div class="stepdesc">
                 Select "Manage Data" from the "Advanced" Menu. Select the Datatype from the "Data" section and then click on "Upload Files" button to add new files for the datatype.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data11.png' />
+                <p><img class="lazyload" data-src='images/Data11.png' />
                 </p></li>
                 <li>
                 <div class="stepdesc">
                 A Window will appear as shown below.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data12.png' />
+                <p><img class="lazyload" data-src='images/Data12.png' />
                 </p></li>
                 <li>
                 <div class="stepdesc">
                 Click on the "Add File" button and select the files for the datatype
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data13.png' />
+                <p><img class="lazyload" data-src='images/Data13.png' />
                 </p></li>
                 <li>
                 <div class="stepdesc">
                 Click on "Upload" to start uploading datasets.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data14.png' />
+                <p><img class="lazyload" data-src='images/Data14.png' />
                 </p></li>
                 <li>
                 <div class="stepdesc">
                 After the upload finishes, close the popup window.<br />
                 You will see the newly uploaded data under the Datatype for which the data was uploaded.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data15.png' />
+                <p><img class="lazyload" data-src='images/Data15.png' style="width:50%"/>
                 </p></li>
                 <li>
                 <div class="stepdesc"> Click on the Dataset to see the dataset's Property Grid.<br />
                 Property values of the Dataset can be edited by clicking on the "Value" column as shown below.</div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data16.png' /> </p>
+                <p><img class="lazyload" data-src='images/Data16.png' /> </p>
                 <div class="stepdesc">
                 Click on "Save" to save the metadata for this Dataset.
                 </div>
-                <p><img onload="this.width/=2;this.onload=null;" src='images/Data17.png' />
+                <p><img class="lazyload" data-src='images/Data17.png' style="width:30%"/>
                 </p></li>
               </ol>
               </ol> 
@@ -526,64 +532,64 @@ margin-top: -90px;
               <div class='stepdesc'>
               Open "Manage Component Types" page from the Portal Navigation Menu.
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types1.png' />
+              <p><img class="lazyload" data-src='images/types1.png' />
               </p></li>
               <li>
               <div class='stepdesc'>
               This is the "Manage Component Types" interface. In here, we can add abstract component types, and organize them into categories
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types2.png' />
+              <p><img class="lazyload" data-src='images/types2.png' />
               </p></li>
               <li>
               <div class='stepdesc'>
                This is the "Add Category" button. Click it to create a new category.
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types3.png' />
+              <p><img class="lazyload" data-src='images/types3.png' style="width:50%"/>
               </p></li>
               <li>
               <div class='stepdesc'>
               A window will popup asking for the name of the new Component Category.
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types14.png' />
+              <p><img class="lazyload" data-src='images/types14.png' style="width:50%"/>
               </p></li>
               <li>
               <div class='stepdesc'>
               The new Category appears under the top-level "Components". If we wanted it under another category, we could've selected it before Adding new Category.
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types15.png' />
+              <p><img class="lazyload" data-src='images/types15.png' style="width:50%"/>
               </p></li>
               <li>
               <div class='stepdesc'>
               New Component types can be added by clicking on the "Add type" button. The Component will become a sub-component of the Selected Component or the Selected Category (if nothing is selected, then it becomes a sub-component of "Components", which is the top-level Category).<br />
               Select 'WordCounts' and click on the "Add Type" button.<br />
-              <img onload="this.width/=2;this.onload=null;" src='images/types15.1.png' /><br />
+              <img class="lazyload" data-src='images/types15.1.png' style="width:50%"/><br />
               <br/><br />
               One can also right-click on the category.<br />
-              <img onload="this.width/=2;this.onload=null;" src='images/types15.2.png' />
+              <img class="lazyload" data-src='images/types15.2.png' style="width:50%"/>
               </br/></div>
               </li>
               <li>
               <div class='stepdesc'>
               A window will popup asking for the name of the new Component type.
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types16.png' />
+              <p><img class="lazyload" data-src='images/types16.png' style="width:50%"/>
               </p></li>
               <li>
               <div class='stepdesc'>
               The newly created Component is shown in the tree under 'WordCounts'
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types17.png' />
+              <p><img class="lazyload" data-src='images/types17.png' style="width:50%"/>
               </p></li>
               <li>
               <div class='stepdesc'>
               Click on "SingleWordCount" to get a view of the UI that appears on the right.
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types18.png' /><br />
+              <p><img class="lazyload" data-src='images/types18.png' /><br />
               <br/><br />
               The various tabs for the component type are shown below:<br />
-              <img onload="this.width/=2;this.onload=null;" src='images/types9.1.png' /><br />
-              <img onload="this.width/=2;this.onload=null;" src='images/types9.2.png' /><br />
-              <img onload="this.width/=2;this.onload=null;" src='images/types9.3.png' /><br />
+              <img class="lazyload" data-src='images/types9.1.png' /><br />
+              <img class="lazyload" data-src='images/types9.2.png' /><br />
+              <img class="lazyload" data-src='images/types9.3.png' /><br />
               <br/><br />
               Now this component's IO can be described.
               </br/></br/></p></li>
@@ -591,33 +597,33 @@ margin-top: -90px;
               <div class='stepdesc'>
               Click on the "Add" button to add Input Data, Input Parameters, or Output Data.
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types9.png' />
+              <p><img class="lazyload" data-src='images/types9.png' />
               </p></li>
               <li>
               <div class='stepdesc'>
               Give a unique name as the argument identifier, and select a type for it.<br />
               The dimensionality can be set to 1, in case a single instance of this Component expects an input data collection of unspecified size (like a "merge" step)
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types19.png' />
+              <p><img class="lazyload" data-src='images/types19.png' />
               </p></li>
               <li>
               <div class='stepdesc'>
               If any input parameters are expected for the component, then click on the "Add" button in the "Input Parameters" section.<br />
               Remember to add the datatype, and a default value for the parameter
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types11.png' />
+              <p><img class="lazyload" data-src='images/types11.png' />
               </p></li>
               <li>
               <div class='stepdesc'>
               Similarly add the output identifiers.
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types12.png' />
+              <p><img class="lazyload" data-src='images/types12.png' />
               </p></li>
               <li>
               <div class='stepdesc'>
               Click the "Save" button to save the Component Type Description
               </div>
-              <p><img onload="this.width/=2;this.onload=null;" src='images/types13.png' />
+              <p><img class="lazyload" data-src='images/types13.png' style="width:30%" />
               </p></li>
               </ol>
 
@@ -632,84 +638,84 @@ margin-top: -90px;
             <div class='stepdesc'>
             Open "Manage Components" page from the Portal Navigation Menu.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp1.png' />
+            <p><img class="lazyload" data-src='images/Comp1.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             This is the "Manage Components" interface.<br />
             In here, we can add Components and Upload code
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp2_new.png' />
+            <p><img class="lazyload" data-src='images/Comp2_new.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="add_component"></a> New components must be added as sub-components of an abstract component (greyed out icon). To add a new abstract component, refer to the <a href="#manage_component_types">tutorial on managing component types</a>. Once you have selected an abstract component, the new component will become a sub-component of the selected abstract component or the selected category.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp3_new.png' /><br />
+            <p><img class="lazyload" data-src='images/Comp3_new.png' style="width:50%"/><br />
             <br/><br />
             One can also right-click on the component type<br />
-            <img onload="this.width/=2;this.onload=null;" src='images/Comp3.1_new.png' />
+            <img class="lazyload" data-src='images/Comp3.1_new.png' style="width:50%"/>
             </br/></p></li>
             <li>
             <div class='stepdesc'>
             A window will popup asking for the name of the new Component.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp4_new.png' />
+            <p><img class="lazyload" data-src='images/Comp4_new.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             The newly created Component is shown in "Red". This indicates that there is no code associated with it.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp5_new.png' />
+            <p><img class="lazyload" data-src='images/Comp5_new.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="describe_component"></a> Click on "HTMLTagCount" to get a view of the UI that appears on the right.<br />
             Now this component's IO (Inputs/Outputs) can be described.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp6_new.png' />
+            <p><img class="lazyload" data-src='images/Comp6_new.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             The Input and Output Data from the Abstract Component appear on the right.<br />
             Click on the "Add" button to add more Input Data, Input Parameters, or Output Data. The type of the data can also be specialized. For example, we can change sampleInputFile1 from being a FormattedFile to a HTMLFile
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp7.png' />
+            <p><img class="lazyload" data-src='images/Comp7.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             Before adding code for the component, first add software and hardware dependencies for the component. The list of software dependencies is defined the System Administrator from the "Manage Resources" interface
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp7.1.png' />
+            <p><img class="lazyload" data-src='images/Comp7.1.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             Click the "Save" button to save the Component Description
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp7.8.png' />
+            <p><img class="lazyload" data-src='images/Comp7.8.png' style="width:30%"/>
             </p></li>
             <li><div class='stepdesc'>There are two ways to put component code into WINGS: writing code in the code editor and uploading code. To use the code editor, select the component from the component tree on the left and then click on the "Code" tab.</div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp7.01.png' />
+            <p><img class="lazyload" data-src='images/Comp7.01.png' />
             </p></li>
             <li><div class='stepdesc'>Click on "Initialize" and select a language to create the necessary files to write the code for the components.</div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp7.02.png' />
+            <p><img class="lazyload" data-src='images/Comp7.02.png' />
             </p></li>
             <li><div class='stepdesc'>Three files will be created. The run file and bash script should not be modified. Click save to save the newly written code. Only use initialize again if the number of inputs, parameters, or outputs are altered and saved on the "I/O" tab. This will create a new run file to ensure the program runs. The contents of the other files will remain the same if they are saved.</div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp7.03.png' />
+            <p><img class="lazyload" data-src='images/Comp7.03.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             Click on "Upload/Set Path" to upload the component package, but first we need to make the Component Package.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp8.png' />
+            <p><img class="lazyload" data-src='images/Comp8.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a href="io.sh">Download io.sh</a> into a folder named "HTMLTagCount" or click on the io.sh file, copy the contents into a text file, and save it as io.sh.
             </a></div>
-            <p><img onload="this.width/=1;this.onload=null;" src='images/Comp9.png' />
+            <p><img onload="this.width/=1;this.onload=null;" src='images/Comp9.png' style="width:50%"/>
             </p>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp9.1.png' />
+            <p><img class="lazyload" data-src='images/Comp9.1.png' />
             </p>
             </li>
             <li>
@@ -739,43 +745,43 @@ margin-top: -90px;
             <div class='stepdesc'>
             Zip the Component Folder
             </div>
-            <p><img onload="this.width/=1;this.onload=null;" src='images/Comp27.png' />
+            <p><img onload="this.width/=1;this.onload=null;" src='images/Comp27.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
              Click "Upload/Set Path"
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp28.png' />
+            <p><img class="lazyload" data-src='images/Comp28.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             A dialog appears where the path to the component needs to be entered. Click on the "Upload Component" text at the bottom of the dialog
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp29.png' />
+            <p><img class="lazyload" data-src='images/Comp29.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             The dialog expands. Now click on the "Add File" button
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp30.png' />
+            <p><img class="lazyload" data-src='images/Comp30.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             Select the component's zip file and click 'Open'
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp31.png' />
+            <p><img class="lazyload" data-src='images/Comp31.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             The file now appears in the file list. Click on 'Upload'
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp32.png' />
+            <p><img class="lazyload" data-src='images/Comp32.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             The Component icon turns "yellow" which means that it is a "Concrete" component (i.e. has code and is executable)
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Comp33.png' />
+            <p><img class="lazyload" data-src='images/Comp33.png' />
             </p></li>
             </ol>
             
@@ -870,94 +876,94 @@ margin-top: -90px;
             <div class='stepdesc'>
             Open "Edit Workflows" page from the Portal Navigation Menu.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit1.png' />
+            <p><img class="lazyload" data-src='images/Edit1.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             This is the "Edit Workflows" interface.<br />
             In here, we can create Workflow Templates
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit2.png' />
+            <p><img class="lazyload" data-src='images/Edit2.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="create_template"></a> This is the "New Template" button. Click on it to create a new workflow template.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit3.png' />
+            <p><img class="lazyload" data-src='images/Edit3.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             A window will popup asking for the name of the new Workflow Template.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit4.png' />
+            <p><img class="lazyload" data-src='images/Edit4.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             The new template ("MultiCountWords" in this case) is shown under Templates on the left side of the interface, and the template editor is opened automatically as well on the right in a new Tab.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit5.png' />
+            <p><img class="lazyload" data-src='images/Edit5.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="view_available_components"></a> The "Components" Tab on the left shows the components available
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit6.png' />
+            <p><img class="lazyload" data-src='images/Edit6.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             The "Components" can be shown in 3 views. The default "Tree" view, which shows the hierarchy of components.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit7.png' />
+            <p><img class="lazyload" data-src='images/Edit7.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             The "Inputs" view, which shows components grouped by inputs.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit8.png' />
+            <p><img class="lazyload" data-src='images/Edit8.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             The "Outputs" view, which shows components grouped by outputs.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit9.png' />
+            <p><img class="lazyload" data-src='images/Edit9.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             Hovering on a component shows it's Inputs and Outputs.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit10.png' />
+            <p><img class="lazyload" data-src='images/Edit10.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="add_node"></a> To Add a component to the Workflow Template, Drag the component from the left to the checked area on the right.<br />
             The icon of the dragging component shows if it is ok to drop or not. Here it shows that it NOT OK.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit11.png' />
+            <p><img class="lazyload" data-src='images/Edit11.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             As we approach the checked area, the icon indicates that it is OK to drop.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit12.png' />
+            <p><img class="lazyload" data-src='images/Edit12.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="component_colors"></a> After dropping, the component appears in the workflow template. The text is red colored as it's input and output ports (the small rectangular boxes) haven't been connected to variables yet.<br />
             The color of the box itself is "light-orange" if this is a concrete component, and "gray" if this is an abstract component.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit13.png' />
+            <p><img class="lazyload" data-src='images/Edit13.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             You can select the component and move it around.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit14.png' />
+            <p><img class="lazyload" data-src='images/Edit14.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="add_link"></a> Hovering over a port (the small rectangular boxes) shows information about it. These ports correspond to the component identifiers that were created in the "Manage Components" interface.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit15.png' />
+            <p><img class="lazyload" data-src='images/Edit15.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
@@ -970,7 +976,7 @@ margin-top: -90px;
             <li>another component port (which will link both components together via a new variable)</li>
             </ul>
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit17.png' />
+            <p><img class="lazyload" data-src='images/Edit17.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
@@ -978,62 +984,62 @@ margin-top: -90px;
             Parameter Variables are shown in Green.<br />
             All other variables are shown in Navy Blue.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit16.png' />
+            <p><img class="lazyload" data-src='images/Edit16.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="dot_layout"></a> Click on "Layout" to connect to Graphviz (if installed) and layout the workflow template. This is useful especially if the graph is becoming quite big and unmanageable.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit18.png' />
+            <p><img class="lazyload" data-src='images/Edit18.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             Here the system is trying to connect to "dot". If this doesn't work, make sure that the path to "dot" is correctly specified in portal.properties
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit19.png' />
+            <p><img class="lazyload" data-src='images/Edit19.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             After laying out
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit20.png' />
+            <p><img class="lazyload" data-src='images/Edit20.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="zoom_functions"></a> There are other buttons above the Graph like "Zoom" functions.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit21.png' />
+            <p><img class="lazyload" data-src='images/Edit21.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="grab_image"></a> The "Grab Image" function creates an image out of the canvas that can be saved on desktop.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit22.png' />
+            <p><img class="lazyload" data-src='images/Edit22.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="elaborate_template"></a> This is the "Elaborate Template" button found above the graph, on top of the "Constraints Table".<br />
             Click it to connect to the Wings Semantic Reasoner in order to reason about, validate, and add more annotations to the Workflow.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit23.png' />
+            <p><img class="lazyload" data-src='images/Edit23.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             Here the system is getting an elaborated workflow from the Wings Semantic Reasoner.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit24.png' />
+            <p><img class="lazyload" data-src='images/Edit24.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             A popup window appears after Elaboration.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit25.png' />
+            <p><img class="lazyload" data-src='images/Edit25.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="variable_constraints"></a> Constraints for this workflow template are shown in the "Constraints Table" after elaboration.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit26.png' />
+            <p><img class="lazyload" data-src='images/Edit26.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
@@ -1041,25 +1047,25 @@ margin-top: -90px;
             The Constraints Table now only shows Constraints for sampleInputFile1 variable.<br />
             Also, below the Graph is an editable form that allows changing properties of this variable.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit27.png' />
+            <p><img class="lazyload" data-src='images/Edit27.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="edit_variable"></a> The Variable name can be changed once the Variable is selected in the graph.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit28.png' />
+            <p><img class="lazyload" data-src='images/Edit28.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="edit_variable_collection"></a> For Inputs to the workflow, we can also indicate whether the Variable should be a collection or not.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit29.png' />
+            <p><img class="lazyload" data-src='images/Edit29.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             Collection variables appear as a stack of ovals.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit30.png' />
+            <p><img class="lazyload" data-src='images/Edit30.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
@@ -1067,93 +1073,93 @@ margin-top: -90px;
             By default "Use all Input Data in same workflow" is set to true.  That means if the coming input variable is a collection (or of a higher dimensionality that what is expected), then we should create multiple parallel instances of the Component to handle the input data.<br />
             Collection components appear as a stack of rectangles.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit31.png' />
+            <p><img class="lazyload" data-src='images/Edit31.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             The "Input Data Combination" tab provides an interface to setup the way input data collections are combined and provided to the components using the data.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit31.1.png' />
+            <p><img class="lazyload" data-src='images/Edit31.1.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             This shows that by default a Cross-Product (XPRODUCT) of all inputs is done. The other combination function is NWISE(i.e. one-to-one match by index). Operations that work on a single port are: Increase Dimension (INCREASEDIM), Reduce Dimension (REDUCEDIM), and SHIFT (i.e. reducing collection size by one and shifting to the left). These single-port operators can be also used as argument to XPRODUCT and NWISE.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit31.2.png' />
+            <p><img class="lazyload" data-src='images/Edit31.2.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             Here we can select the ports on which the combination function occurs.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit31.3.png' />
+            <p><img class="lazyload" data-src='images/Edit31.3.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="multiple_selection"></a> Multiple items in the graph can be selected by Dragging a box around them.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit33.png' />
+            <p><img class="lazyload" data-src='images/Edit33.png' style="width:50%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="delete_items"></a> Selected items can be deleted by pressing the "Delete Selected" button.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit34.png' />
+            <p><img class="lazyload" data-src='images/Edit34.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="add_constraint"></a> Click on "Add Constraint" to create a new Constraint.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit35.png' />
+            <p><img class="lazyload" data-src='images/Edit35.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="edit_constraint"></a> Constraint items can be edited by clicking on them.<br />
             The Variable item shows a drop-down list of the current workflow template's variables.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit36.png' />
+            <p><img class="lazyload" data-src='images/Edit36.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             The "Constraint" item shows a list of all constraints that can be specified. This contains some constraints from the "wflow" namespace, and an "rdf:type" constraint. The rest of the constraints from the "dcdom" namespace are the ones that have been described in the "Manage Data" interface.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit37.png' />
+            <p><img class="lazyload" data-src='images/Edit37.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="set_parameter_values"></a> We can set values for Parameter Variables by using the constraint "wflow:hasParameterValue".<br />
             First click on 'Add Contraint' button, and then select the variable as word, constraint as 'wflow:hasParameterValue' and enter the value as shown below
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit38.png' />
+            <p><img class="lazyload" data-src='images/Edit38.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="delete_constraints"></a> Constraints can be selected by clicking on the checkbox next to them. All constraints can be selected by clicking on the checkbox on top.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit39.png' />
+            <p><img class="lazyload" data-src='images/Edit39.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             Click on "Delete Constraint" to delete all selected constraints.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit40.png' />
+            <p><img class="lazyload" data-src='images/Edit40.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="add_documentation"></a> Documentation can be added to describe the template by clicking on the "Documentation" tab.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit41.png' />
+            <p><img class="lazyload" data-src='images/Edit41.png' />
             </p></li>
             <li>
             <div class='stepdesc'>
             <a name="saving"></a> Click on "Save" to save the current tempate.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit42.png' />
+            <p><img class="lazyload" data-src='images/Edit42.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
             Click on "Save As" to save the current tempate with another name.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit43.png' />
+            <p><img class="lazyload" data-src='images/Edit43.png' style="width:30%"/>
             </p></li>
             <li>
             <div class='stepdesc'>
@@ -1163,7 +1169,7 @@ margin-top: -90px;
             <li>Go to the new template and delete any components you no longer need.</li>
             <li>Start building from the parts that were kept from the old template.
             </li></ol></div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Edit43.png' />
+            <p><img class="lazyload" data-src='images/Edit43.png' style="width:30%"/>
             </p></li>
             </ol>
 
@@ -1175,7 +1181,7 @@ margin-top: -90px;
             <div class="stepdesc">
             While editing a workflow, we can set any output variable to act as a breakpoint, where real metadata will be fetched before planning proceeds. In order for this to happen, a partial workflow will be executed, real metadata will be retrieved, and then planning will happen again. This can happen recursively for multiple breakpoints.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Interleaving2.png' />
+            <p><img class="lazyload" data-src='images/Interleaving2.png' />
             </p></li>
             <li>
             <div class="stepdesc">
@@ -1186,19 +1192,19 @@ margin-top: -90px;
             <div class="stepdesc">
             A breakpoint-ed variable is shown in maroon. (This screenshot is from the "Run Workflows" interface)
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Interleaving3.png' />
+            <p><img class="lazyload" data-src='images/Interleaving3.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             After planning a breakpoint-ed workflow, in case the .met file for the output doesn't already exist, the planner will show a truncated workflow to execute. The translucent portions are portions of the workflow which might or might not be present in a future plan. The metadata constraints shown here are "predicted" constraints which comes from component rules, and not the real metadata values. Note the value of "hasSize"
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Interleaving4.png' />
+            <p><img class="lazyload" data-src='images/Interleaving4.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             This is the workflow after it is fully executed, i.e. after partial execution + re-planning + full execution. You can note that the whole workflow is non-translucent here, i.e. the whole workflow has been executed. Also note the value of "hasSize" here which comes from the component itself via the .met file.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Interleaving5.png' />
+            <p><img class="lazyload" data-src='images/Interleaving5.png' />
             </p></li>
             </ol>
 
@@ -1225,48 +1231,48 @@ margin-top: -90px;
             <div class="stepdesc">
             Open "Manage Resources" page from the Portal Navigation Menu. This menu will only be visible to Administrators.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources1.png' />
+            <p><img class="lazyload" data-src='images/Resources1.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             This is the "Manage Resources" interface.<br />
             In here, we can define Software Resources and Hardware Resources (Machines).
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources2.png' />
+            <p><img class="lazyload" data-src='images/Resources2.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             Select a Software. Here we have selected "Java". This shows the interface to specify what all versions are available for this software.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources3.png' /> </p>
+            <p><img class="lazyload" data-src='images/Resources3.png' /> </p>
             <p>Another example for Matlab:<br />
-            <img onload="this.width/=2;this.onload=null;" src='images/Resources3.1.png' />
+            <img class="lazyload" data-src='images/Resources3.1.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             This is the tab where we can specify what all Environment Variables need to be provided by machines for this software. These environment variables can then be used by Wings Components in their script to ensure portability across machines.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources4.png' /> </p>
+            <p><img class="lazyload" data-src='images/Resources4.png' /> </p>
             <p>Or for Matlab:<br />
-            <img onload="this.width/=2;this.onload=null;" src='images/Resources4.1.png' />
+            <img class="lazyload" data-src='images/Resources4.1.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             Select a machine. This shows information about the Machine. We should be able to connect to this machine via SSH and SFTP. Therefore we need to provide path to the User private key here. The "Is Healthy" parameter can be turned on or off to make this machine available or unavailable (simulating the health of the machine manually)
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources6.png' />
+            <p><img class="lazyload" data-src='images/Resources6.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             The Software tab has the interface allows to choose the Installed Software for this machine.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources5.png' />
+            <p><img class="lazyload" data-src='images/Resources5.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             We can also specify the software environment variable values that are valid for this machine (i.e. where the software is installed on the machine)
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources7.png' />
+            <p><img class="lazyload" data-src='images/Resources7.png' />
             </p></li>
 
           <h3 id="distexecution">Setting up Distributed Execution</h3>
@@ -1274,25 +1280,25 @@ margin-top: -90px;
             <div class="stepdesc">
             In the component definition (Manage Components), we should specify the minimum software version that is required by the component. This software should be defined as mentioned above.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources8.png' />
+            <p><img class="lazyload" data-src='images/Resources8.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             In "Manage Domains", we should set the execution engine for the domain to be "Distributed".
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources9.png' />
+            <p><img class="lazyload" data-src='images/Resources9.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             In the "Run Workflow" interface, after planning a workflow, the Executable Workflow shows the set of machines that the component can be executed in. Before running each component, the system chooses a healthy machine from this set at random.
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources10.png' />
+            <p><img class="lazyload" data-src='images/Resources10.png' />
             </p></li>
             <li>
             <div class="stepdesc">
             The Run log in the "Access Runs" interface will indicate that the component was run remotely (assuming the Local machine wasn't chosen at random from the set of valid machines).
             </div>
-            <p><img onload="this.width/=2;this.onload=null;" src='images/Resources11.png' />
+            <p><img class="lazyload" data-src='images/Resources11.png' />
             </p></li>
             </ol>
 
@@ -1302,32 +1308,32 @@ margin-top: -90px;
           <div class="stepdesc">
           Open "Manage Users" page from the Portal Navigation Menu. This menu will only be visible to Administrators.
           </div>
-          <p><img onload="this.width/=2;this.onload=null;" src='images/Users1.png' />
+          <p><img class="lazyload" data-src='images/Users1.png' />
           </p></li>
           <li>
           <div class="stepdesc">
           This is the "Manage Users" interface.<br />
           In here, s and delete Users. We can also define some users to be admins, and set their names.
           </div>
-          <p><img onload="this.width/=2;this.onload=null;" src='images/Users2.png' />
+          <p><img class="lazyload" data-src='images/Users2.png' />
           </p></li>
           <li>
           <div class="stepdesc">
           Select a User. The interface shows the User details on top, and the user activity below
           </div>
-          <p><img onload="this.width/=2;this.onload=null;" src='images/Users3.png' />
+          <p><img class="lazyload" data-src='images/Users3.png' />
           </p></li>
           <li>
           <div class="stepdesc">
           Click on the Edit button to edit user details.
           </div>
-          <p><img onload="this.width/=2;this.onload=null;" src='images/Users4.png' />
+          <p><img class="lazyload" data-src='images/Users4.png' style="width:30%"/>
           </p></li>
           <li>
           <div class="stepdesc">
           Set the User details. Select the "Is Admin" field to set the user to be an administrator. Then click the Save button
           </div>
-          <p><img onload="this.width/=2;this.onload=null;" src='images/Users5.png' />
+          <p><img class="lazyload" data-src='images/Users5.png' />
           </p></li>
           </ol>
 
