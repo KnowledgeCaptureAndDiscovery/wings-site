@@ -22,7 +22,7 @@ body, html {
 
 dd.people {
     height: 200px;
-    background: #ddd;
+ /*   background: #ddd;*/
     padding: 5px;
     margin: 2px;
     vertical-align: middle;
@@ -31,6 +31,15 @@ dd.people {
     float: left;
 }
 </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118863115-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118863115-1');
+</script>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -46,6 +55,7 @@ dd.people {
       <a href="download.html" class="w3-bar-item w3-button"> Download</a>
     <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
     <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
+    <a href="people.html" class="w3-bar-item w3-button"><Strong>People</strong></a>
     
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -66,6 +76,7 @@ dd.people {
   <a href="download.html" class="w3-bar-item w3-button"> Download</a>
   <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
   <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
+  <a href="people.html" class="w3-bar-item w3-button"><Strong>People</strong></a>
 </nav>
 
 
@@ -98,6 +109,19 @@ dd.people {
     
     <div class="w3-row-padding w3-white">
     <h3>Collaborators:</h3>
+    <dd class="people"><a href="http://plantscience.psu.edu/research/labs/kemanian">Armen Kemanian</a><br>
+    <img src="http://mint-project.info/assets/images/team/kemanian.jpg" width="120"><br>
+    </dd>
+    <dd class="people"><a href="http://www.engr.psu.edu/ce/directory/websites/duffy_c.html">Christopher Duffy</a><br>
+    <img src="http://mint-project.info/assets/images/team/duffy.jpg" width="120"><br>
+    </dd>
+    <dd class="people"><a href="http://www.globalchange.vt.edu/dr-kelly-cobourn/">Kelly Cobourn</a><br>
+    <img src="http://mint-project.info/assets/images/team/cobourn.jpg" width="120"><br>
+    </dd>
+    <dd class="people"><a href="https://instaar.colorado.edu/people/scott-d-peckham/">Scott Peckham</a><br>
+    <img src="http://mint-project.info/assets/images/team/peckham.jpg" width="120"><br>
+    </dd>
+    
     <dd class="people"><a href="http://rafaelsilva.com/">Rafael Ferreira da Silva</a><br>
     <img src="http://mint-project.info/assets/images/team/ferreiradasilva.png" width="120"><br>
     </dd>
@@ -203,6 +227,9 @@ dd.people {
     <dd class="people">Hyunjoon Jo<br>
     <img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"><br>
     </dd>
+    <dd class="people">Ken Cheong<br>
+    <img src="http://www.isi.edu/ikcap/images/default-person.jpg" width="120"><br>
+    </dd>
 </div>
 </div>
 
@@ -210,9 +237,11 @@ dd.people {
 <!-- Footer -->
 <footer class="w3-center w3-black ">
     <div class="w3-container">
-      <p class="w3-justify">We are grateful for funding from the National Science Foundation under grants CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants NIH U24 MH068457 and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants HR0011-07-C-0060 and W911NF-15-1-0555, and from the Air Force Research Laboratory under grant FA8750-06-C-0210.</p>
+      <p class="w3-justify foot">We are grateful for funding from the National Science Foundation under grants ICER-1740683, ICER-1639716, ICER-1632211, ICER-1540937, IIS-1533930, ICER-1440323, IIS-1344272, ACI-1355475, ICER-1343800, CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants 1R01AG059874-01, 1R01GM117097-01, U24MH068457, and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants W911NF-18-1-0027, FA8750-17-C-0106, W911NF-14-1-0364, W911NF-15-1-0555, FA8750-13-C-0016, HR0011-07-C-0060, and W911NF-15-1-0555, from the Air Force Research Laboratory under grant FA8750-06-C-0210, from the Air Force Office of Scientific Research under grant AFOSR FA9550-11-1-0104, and from the National Aeronautics and Space Administration under grant 14-AIST-14-0034.</p>
      
-      <p>Site powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> <p><a href="people.html" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
+      <p class="foot">Site powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> 
+      
+      <p><a href="home.html" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
     </div>
     <!--class="w3-light-grey w3-button" -->
   

@@ -20,6 +20,15 @@ body, html {
   padding: 16px;
 }
 </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118863115-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118863115-1');
+</script>
 <body>
 
   <!-- Navbar (sit on top) -->
@@ -35,6 +44,7 @@ body, html {
         <a href="download.html" class="w3-bar-item w3-button"><strong>Download</strong></a>
         <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
         <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
+        <a href="people.html" class="w3-bar-item w3-button">People</a>
 
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -55,6 +65,7 @@ body, html {
     <a href="download.html" class="w3-bar-item w3-button"><strong>Download</strong></a>
     <a href="tutorial/tutorial.html" class="w3-bar-item w3-button"> Tutorial</a>
     <a href="cite.html" class="w3-bar-item w3-button"> Cite</a>
+    <a href="people.html" class="w3-bar-item w3-button">People</a>
   </nav>
 
   <!-- About Section -->
@@ -68,8 +79,8 @@ body, html {
 <p>By clicking any of the following links and/or downloading the software they refer to by any other means you agree to comply with the <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License Version 2.0</a><br />
 For instructions on how to install Wings, please follow these <a href="https://github.com/KnowledgeCaptureAndDiscovery/wings/blob/master/README.md">Installation Instructions</a>.</p>
 
-<h4><a href="release/wings-portal-4.0-SNAPSHOT.war">Download latest WINGS Portal</a></h4> (MD5 hash: 743de002e77833b16951a55dbe8ba382, Released on 6 February 2016).
-
+<h4><a href="https://github.com/KnowledgeCaptureAndDiscovery/wings/releases"><strong>Download latest WINGS Portal</strong></a></h4> 
+<!--
 <h5>Release details</h5>
 A summary of changes from the previous version (3.0-SNAPSHOT):
 
@@ -93,13 +104,13 @@ A summary of changes from the previous version (3.0-SNAPSHOT):
     <li>
     Revamped icons. Using Font-based Icons for more flexibility, light weight, and better appearance with high-res retina displays.
     </li>
-</ul>
+</ul>-->
 <h3>GitHub</h3>
-<p>The latest development version of WINGS is available on GitHub: <a href="http://github.com/knowledgecaptureanddiscovery/wings" title="http://github.com/knowledgecaptureanddiscovery/wings">http://github.com/knowledgecaptureanddiscovery/wings</a>
+<p>The latest development version of WINGS is available on GitHub: <a href="http://github.com/knowledgecaptureanddiscovery/wings" title="http://github.com/knowledgecaptureanddiscovery/wings">http://github.com/knowledgecaptureanddiscovery/wings</a>. If you get stuck or find a bug, please let us know by <a href="https://github.com/KnowledgeCaptureAndDiscovery/wings/issues">opening an issue</a>.
 </p>
-<h3>Docker</h3>
+<h3>Running WINGS as a Docker container</h3>
 <p>
-If you are familiar with Docker, we also have a WINGS Docker image. Check <a href="https://github.com/KnowledgeCaptureAndDiscovery/wings-docker">our instructions</a> on how to download it and a <a href="https://dgarijo.github.io/Materials/Tutorials/wings-docker/#sec2-1">tutorial</a> with usage examples.
+Check <a href="https://github.com/KnowledgeCaptureAndDiscovery/wings-docker">our instructions</a> on how to download and set up the WINGS Docker image and a <a href="https://dgarijo.github.io/Materials/Tutorials/wings-docker/#sec2-1">tutorial</a> with usage examples.
 </p>
 </div>
 </div>
@@ -109,10 +120,13 @@ If you are familiar with Docker, we also have a WINGS Docker image. Check <a hre
 <!-- Footer -->
 <footer class="w3-center w3-black ">
     <div class="w3-container">
-      <p class="w3-justify">We are grateful for funding from the National Science Foundation under grants CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants NIH U24 MH068457 and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants HR0011-07-C-0060 and W911NF-15-1-0555, and from the Air Force Research Laboratory under grant FA8750-06-C-0210.</p>
+      <p class="w3-justify foot">We are grateful for funding from the National Science Foundation under grants ICER-1740683, ICER-1639716, ICER-1632211, ICER-1540937, IIS-1533930, ICER-1440323, IIS-1344272, ACI-1355475, ICER-1343800, CCF-0725332, IIS-0917328, IIS-0948429, and CSR-0615412, from the National Institutes of Health under grants 1R01AG059874-01, 1R01GM117097-01, U24MH068457, and 1R01GM117097, from the Defense Advanced Research Projects Agency under grants W911NF-18-1-0027, FA8750-17-C-0106, W911NF-14-1-0364, W911NF-15-1-0555, FA8750-13-C-0016, HR0011-07-C-0060, and W911NF-15-1-0555, from the Air Force Research Laboratory under grant FA8750-06-C-0210, from the Air Force Office of Scientific Research under grant AFOSR FA9550-11-1-0104, and from the National Aeronautics and Space Administration under grant 14-AIST-14-0034.</p>
      
-      <p>Site powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> <p><a href="download.html" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
+      <p class="foot">Site powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> 
+      
+      <p><a href="home.html" class="w3-hover-text-blue"><i class="fa fa-arrow-up w3-margin-right">Back to top</i></a> </p>
     </div>
+    <!--class="w3-light-grey w3-button" -->
   
 </footer>
  
