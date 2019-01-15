@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<title>Tutorial</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../images/logoMini.png">
+<link rel="stylesheet" href="../css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Dependencies for adding TOC on the side-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+<script src = "../js/lazysizes.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118863115-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118863115-1');
+</script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+    background: #edf5fa;
+}
+
+.w3-bar .w3-button {
+    padding: 16px;
+}
+/*
+html{
+  scroll-behavior:smooth;
+}
+*/
+nav[data-toggle='toc'] {
+  margin-top: 100px;
+  position: fixed;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+  /* override the Affix plugin so that the navigation isn't sticky */
+  nav.affix[data-toggle='toc'] {
+    position: static;
+    width:100%;
+  }
+
+  /* don't expand nested items, which pushes down the rest of the page when navigating */
+  nav[data-toggle='toc'] .nav .active .nav {
+    display: none;
+  }
+}
+/*fix for the headers*/
+h1,h2,h3{
+padding-top: 110px; 
+margin-top: -90px;
+}
+.affix {
+    position: fixed;
+    width:25%;
+}
+img{
+width:50%;
+}
+</style>
+<body data-spy="scroll" data-target="#toc">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white2 w3-card" id="myNavbar">
+    <img alt="100%x200" class="w3-bar-item" src="../images/garland_logo.png" alt="WINGS LOGO"/> 
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="../home.html" class="w3-bar-item w3-button">Home</a>
+      <a href="../about.html" class="w3-bar-item w3-button">About</a>
+      <a href="../research.html" class="w3-bar-item w3-button"> Research</a>
+      <a href="../publications.html" class="w3-bar-item w3-button"> Publications</a>
+      <a href="../download.html" class="w3-bar-item w3-button"> Download</a>
+    <a href="" class="w3-bar-item w3-button"><strong>Tutorial</strong></a>
+    <a href="../cite.html" class="w3-bar-item w3-button"> Cite</a>
+    <a href="../people.html" class="w3-bar-item w3-button">People</a>
+    
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item  w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars whiteg"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-large w3-padding-16">Close ×</a>
+  <a href="../home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="../about.html" class="w3-bar-item w3-button"><strong>About</strong></a>
+  <a href="../research.html" class="w3-bar-item w3-button"> Research</a>
+  <a href="../publications.html" class="w3-bar-item w3-button"> Publications</a>
+  <a href="../download.html" class="w3-bar-item w3-button"> Download</a>
+  <a href="" class="w3-bar-item w3-button"> Tutorial</a>
+  <a href="../cite.html" class="w3-bar-item w3-button"> Cite</a>
+  <a href="../people.html" class="w3-bar-item w3-button">People</a>
+</nav>
+<!-- About Section -->
+
+<div class="w3-container" style="padding-top:8%; padding-bottom:3%">
+ <div class="w3-row  w3-white">
+      <!-- sidebar, which will move to the top on a small screen -->
+      <div class="col-sm-3">
+        <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
+      </div>
+
+  <div class="col-sm-9">
+
+
+
+
+<h2 id="Advanced-Semantic-Constraints-of-Components" data-line="0">Advanced Semantic Constraints of Components</h2>
+<p data-line="2">Wings allows for the specification of more advanced semantic functionality of components via the definition of rules. Use of these rules is entirely optional. As you saw from the previous testing sections, they are not necessary in order to elaborate or run a workflow. Nevertheless, they provide a very expressive mechanism to state semantic constraints in Wings. As a result, writing rules takes time to master. We are working towards providing a better interface for specifying this functionality that makes manual authoring of rules unnecessary.</p>
+<p data-line="4"><em>NOTE: Wings uses the W3C’s OWL standard to represent and reason about semantic constraints. However, OWL has limited expressivity. A rule language can be used in combination with OWL to express more advanced constraints. The W3C is currently developing a recommendation (ie, a standard) for a rule language.</em></p>
+<p data-line="6">If you are not familiar with rules, we recommend that you read some introductory materials on this subject. At the moment, Wings supports <a href="http://jena.sourceforge.net/inference/#rules">Apache Jena rules</a>. In the future we plan to support <a href="https://www.w3.org/TR/rif-overview/">standard rule languages as they become available</a>.</p>
+<p data-line="8">Rules can be entered in the text field in the “Component Rules” tab in the Component Browser. You can use Jena rule syntax and in particular rule built-ins to specify complex conditions. These rules are not associated with any specific component. Instead, in each rule one needs to specify on the left-hand side appropriate conditions under which the rule applies (“fires”), asserting its right-hand side. Hence, if a rule shall only apply to a specific component (which is often the case, see examples below), you need to specify appropriate conditions to limit the application of the rule to only that component.</p>
+<p data-line="10">To get started, consider the following two stubs, specifying two common shapes of these rules:</p>
+<p data-line="12">Preconditions</p>
+<pre class="code CodeMirror" data-line="13">
+<code class="">[name_preconditions:
+ (?c rdf:type pcdom:nameClass)
+ (?c pc:hasInput ?in1) (?in1 pc:hasArgumentID &quot;Input1in1&quot;)
+
+ # your conditions here, e.g., notEqual(?in1, ?in2), or (?in1 dcdom:hasLanguage &quot;en&quot;)
+
+ -&gt; (?c ac:isInvalid &quot;true&quot;^^xsd:boolean)
+]
+</code>
+</pre><p data-line="23">Effects</p>
+<pre class="code CodeMirror" data-line="25">
+<code class="">[name_effects:
+ (?c rdf:type pcdom:nameClass)
+ (?c pc:hasInput ?in1) (?in1 pc:hasArgumentID &quot;Input1in1&quot;)
+ (?c pc:hasOutput ?out1) (?out1 pc:hasArgumentID &quot;Output1out1&quot;)
+
+ # optionally, you can add conditions here to make this effect conditional, 
+ # or to get the values of some input properties, e.g., (?in1 dcdom:hasLanguage ?lang)
+
+ -&gt; 
+  # Your assertions here. These will be added to the knowledge base when 
+  # this type of component encountered during workflow elaboration. E.g., 
+  # (?out1 dcdom:hasLanguage ?lang)
+]</code>
+      </pre><p data-line="42">This rule states the meta-data properties the outputs of a component of a qualified type have. This allows us, for instance, to propagate meta-data properties over the execution of components. For instance, the following rule states that if the input file has some language ?lang, then the output file will also have that language.</p>
+<pre class="code CodeMirror" data-line="44">
+<code class=""> [getSortedWords_effects:
+  (?c rdf:type pcdom:getSortedWordsClass)
+  (?c pc:hasInput ?in1) (?in1 pc:hasArgumentID &quot;Input1TextFile)
+  (?c pc:hasOutput ?out1) (?out1 pc:hasArgumentID &quot;Output1WordListFile)
+  (?in1 dcdom:hasLanguage ?lang)
+ -&gt; 
+  (?out1 dcdom:hasLanguage ?lang)
+ ]</code>
+      </pre><h3 id="Benefits-From-Doing-This" data-line="55">Benefits From Doing This</h3>
+<ul>
+<li data-line="57">Wings will be able to help set up workflow parameters</li>
+<li data-line="58">Wings will be able to validate workflow templates</li>
+<li data-line="59">Wings will be able to automatically select workflow components</li>
+<li data-line="60">Wings will be able to automatically generate metadata</li>
+</ul>
+
+        
+</div>
+</div>
+</div>
+</body>
+</html>
