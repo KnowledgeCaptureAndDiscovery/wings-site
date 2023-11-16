@@ -3,6 +3,10 @@ name: Links
 on:
   repository_dispatch:
   workflow_dispatch:
+  push:
+    branches:
+      - master
+  pull_request:
   schedule:
     - cron: "00 18 * * *"
 
